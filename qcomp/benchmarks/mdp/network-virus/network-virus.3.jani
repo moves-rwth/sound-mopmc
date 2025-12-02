@@ -1,0 +1,3296 @@
+{
+    "actions": [
+        {
+            "name": "attack11_12"
+        },
+        {
+            "name": "attack11_21"
+        },
+        {
+            "name": "attack12_11"
+        },
+        {
+            "name": "attack12_13"
+        },
+        {
+            "name": "attack12_22"
+        },
+        {
+            "name": "attack13_12"
+        },
+        {
+            "name": "attack13_23"
+        },
+        {
+            "name": "attack21_11"
+        },
+        {
+            "name": "attack21_22"
+        },
+        {
+            "name": "attack21_31"
+        },
+        {
+            "name": "attack22_12"
+        },
+        {
+            "name": "attack22_21"
+        },
+        {
+            "name": "attack22_23"
+        },
+        {
+            "name": "attack22_32"
+        },
+        {
+            "name": "attack23_13"
+        },
+        {
+            "name": "attack23_22"
+        },
+        {
+            "name": "attack23_33"
+        },
+        {
+            "name": "attack31_21"
+        },
+        {
+            "name": "attack31_32"
+        },
+        {
+            "name": "attack32_22"
+        },
+        {
+            "name": "attack32_31"
+        },
+        {
+            "name": "attack32_33"
+        },
+        {
+            "name": "attack33_23"
+        },
+        {
+            "name": "attack33_32"
+        },
+        {
+            "name": "clean_11"
+        },
+        {
+            "name": "clean_12"
+        },
+        {
+            "name": "clean_13"
+        },
+        {
+            "name": "clean_21"
+        },
+        {
+            "name": "clean_22"
+        },
+        {
+            "name": "clean_23"
+        },
+        {
+            "name": "clean_31"
+        },
+        {
+            "name": "clean_32"
+        },
+        {
+            "name": "clean_33"
+        }
+    ],
+    "automata": [
+        {
+            "edges": [
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s11 <- 2",
+                                    "ref": "s11",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s11 <- 0",
+                                    "ref": "s11",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s11 = 1)",
+                        "exp": {
+                            "left": "s11",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack11_12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s11 <- 1",
+                                    "ref": "s11",
+                                    "value": 1
+                                },
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s11 = 0)",
+                        "exp": {
+                            "left": "s11",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack11_21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s11 <- 1",
+                                    "ref": "s11",
+                                    "value": 1
+                                },
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s11 = 0)",
+                        "exp": {
+                            "left": "s11",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack12_11",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s11 = 2)",
+                        "exp": {
+                            "left": "s11",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack21_11",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s11 = 2)",
+                        "exp": {
+                            "left": "s11",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "clean_11",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s11 <- 0",
+                                    "ref": "s11",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "clean <- 1",
+                                    "ref": "clean",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s11 = 2)",
+                        "exp": {
+                            "left": "s11",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l",
+                    "transient-values": [
+                        {
+                            "comment": "withvirus <- ((((((((((s11 = 2) ? 1 : 0) + ((s12 = 2) ? 1 : 0)) + ((s13 = 2) ? 1 : 0)) + ((s21 = 2) ? 1 : 0)) + ((s22 = 2) ? 1 : 0)) + ((s23 = 2) ? 1 : 0)) + ((s31 = 2) ? 1 : 0)) + ((s32 = 2) ? 1 : 0)) + ((s33 = 2) ? 1 : 0))",
+                            "ref": "withvirus",
+                            "value": {
+                                "left": {
+                                    "left": {
+                                        "left": {
+                                            "left": {
+                                                "else": 0.0,
+                                                "if": {
+                                                    "left": "s33",
+                                                    "op": "=",
+                                                    "right": 2
+                                                },
+                                                "op": "ite",
+                                                "then": 1
+                                            },
+                                            "op": "+",
+                                            "right": {
+                                                "else": 0.0,
+                                                "if": {
+                                                    "left": "s12",
+                                                    "op": "=",
+                                                    "right": 2
+                                                },
+                                                "op": "ite",
+                                                "then": 1
+                                            }
+                                        },
+                                        "op": "+",
+                                        "right": {
+                                            "else": 0.0,
+                                            "if": {
+                                                "left": "s22",
+                                                "op": "=",
+                                                "right": 2
+                                            },
+                                            "op": "ite",
+                                            "then": 1
+                                        }
+                                    },
+                                    "op": "+",
+                                    "right": {
+                                        "left": {
+                                            "else": 0.0,
+                                            "if": {
+                                                "left": "s31",
+                                                "op": "=",
+                                                "right": 2
+                                            },
+                                            "op": "ite",
+                                            "then": 1
+                                        },
+                                        "op": "+",
+                                        "right": {
+                                            "else": 0.0,
+                                            "if": {
+                                                "left": "s13",
+                                                "op": "=",
+                                                "right": 2
+                                            },
+                                            "op": "ite",
+                                            "then": 1
+                                        }
+                                    }
+                                },
+                                "op": "+",
+                                "right": {
+                                    "left": {
+                                        "left": {
+                                            "else": 0.0,
+                                            "if": {
+                                                "left": "s32",
+                                                "op": "=",
+                                                "right": 2
+                                            },
+                                            "op": "ite",
+                                            "then": 1
+                                        },
+                                        "op": "+",
+                                        "right": {
+                                            "else": 0.0,
+                                            "if": {
+                                                "left": "s11",
+                                                "op": "=",
+                                                "right": 2
+                                            },
+                                            "op": "ite",
+                                            "then": 1
+                                        }
+                                    },
+                                    "op": "+",
+                                    "right": {
+                                        "left": {
+                                            "else": 0.0,
+                                            "if": {
+                                                "left": "s23",
+                                                "op": "=",
+                                                "right": 2
+                                            },
+                                            "op": "ite",
+                                            "then": 1
+                                        },
+                                        "op": "+",
+                                        "right": {
+                                            "else": 0.0,
+                                            "if": {
+                                                "left": "s21",
+                                                "op": "=",
+                                                "right": 2
+                                            },
+                                            "op": "ite",
+                                            "then": 1
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "name": "n11",
+            "variables": []
+        },
+        {
+            "edges": [
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s21 <- 2",
+                                    "ref": "s21",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s21 <- 0",
+                                    "ref": "s21",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s21 = 1)",
+                        "exp": {
+                            "left": "s21",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack11_21",
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s21 = 2)",
+                        "exp": {
+                            "left": "s21",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack21_11",
+                    "destinations": [
+                        {
+                            "location": "l",
+                            "probability": {
+                                "comment": "3/10",
+                                "exp": 0.3
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s21 <- 1",
+                                    "ref": "s21",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 3/10)",
+                                "exp": 0.7
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s21 = 0)",
+                        "exp": {
+                            "left": "s21",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack21_22",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "3/10",
+                                "exp": 0.3
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s21 <- 1",
+                                    "ref": "s21",
+                                    "value": 1
+                                },
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 3/10)",
+                                "exp": 0.7
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s21 = 0)",
+                        "exp": {
+                            "left": "s21",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack21_31",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "3/10",
+                                "exp": 0.3
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s21 <- 1",
+                                    "ref": "s21",
+                                    "value": 1
+                                },
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 3/10)",
+                                "exp": 0.7
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s21 = 0)",
+                        "exp": {
+                            "left": "s21",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack22_21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s21 = 2)",
+                        "exp": {
+                            "left": "s21",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack31_21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s21 = 2)",
+                        "exp": {
+                            "left": "s21",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "clean_21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s21 <- 0",
+                                    "ref": "s21",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "clean <- 1",
+                                    "ref": "clean",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s21 = 2)",
+                        "exp": {
+                            "left": "s21",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "n21",
+            "variables": []
+        },
+        {
+            "edges": [
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s31 <- 2",
+                                    "ref": "s31",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s31 <- 0",
+                                    "ref": "s31",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s31 = 1)",
+                        "exp": {
+                            "left": "s31",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack21_31",
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s31 = 2)",
+                        "exp": {
+                            "left": "s31",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack31_21",
+                    "destinations": [
+                        {
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s31 <- 1",
+                                    "ref": "s31",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s31 = 0)",
+                        "exp": {
+                            "left": "s31",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack31_32",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s31 <- 1",
+                                    "ref": "s31",
+                                    "value": 1
+                                },
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s31 = 0)",
+                        "exp": {
+                            "left": "s31",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack32_31",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s31 = 2)",
+                        "exp": {
+                            "left": "s31",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "clean_31",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s31 <- 0",
+                                    "ref": "s31",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "clean <- 1",
+                                    "ref": "clean",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s31 = 2)",
+                        "exp": {
+                            "left": "s31",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "n31",
+            "variables": []
+        },
+        {
+            "edges": [
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s12 <- 2",
+                                    "ref": "s12",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s12 <- 0",
+                                    "ref": "s12",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s12 = 1)",
+                        "exp": {
+                            "left": "s12",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack11_12",
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s12 = 2)",
+                        "exp": {
+                            "left": "s12",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack12_11",
+                    "destinations": [
+                        {
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s12 <- 1",
+                                    "ref": "s12",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s12 = 0)",
+                        "exp": {
+                            "left": "s12",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack12_13",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s12 <- 1",
+                                    "ref": "s12",
+                                    "value": 1
+                                },
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s12 = 0)",
+                        "exp": {
+                            "left": "s12",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack12_22",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s12 <- 1",
+                                    "ref": "s12",
+                                    "value": 1
+                                },
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s12 = 0)",
+                        "exp": {
+                            "left": "s12",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack13_12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s12 = 2)",
+                        "exp": {
+                            "left": "s12",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack22_12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s12 = 2)",
+                        "exp": {
+                            "left": "s12",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "clean_12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s12 <- 0",
+                                    "ref": "s12",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "clean <- 1",
+                                    "ref": "clean",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s12 = 2)",
+                        "exp": {
+                            "left": "s12",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "n12",
+            "variables": []
+        },
+        {
+            "edges": [
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s22 <- 2",
+                                    "ref": "s22",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s22 <- 0",
+                                    "ref": "s22",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s22 = 1)",
+                        "exp": {
+                            "left": "s22",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack12_22",
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s22 = 2)",
+                        "exp": {
+                            "left": "s22",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack21_22",
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s22 = 2)",
+                        "exp": {
+                            "left": "s22",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack22_12",
+                    "destinations": [
+                        {
+                            "location": "l",
+                            "probability": {
+                                "comment": "3/10",
+                                "exp": 0.3
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s22 <- 1",
+                                    "ref": "s22",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 3/10)",
+                                "exp": 0.7
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s22 = 0)",
+                        "exp": {
+                            "left": "s22",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack22_21",
+                    "destinations": [
+                        {
+                            "location": "l",
+                            "probability": {
+                                "comment": "3/10",
+                                "exp": 0.3
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s22 <- 1",
+                                    "ref": "s22",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 3/10)",
+                                "exp": 0.7
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s22 = 0)",
+                        "exp": {
+                            "left": "s22",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack22_23",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "3/10",
+                                "exp": 0.3
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s22 <- 1",
+                                    "ref": "s22",
+                                    "value": 1
+                                },
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 3/10)",
+                                "exp": 0.7
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s22 = 0)",
+                        "exp": {
+                            "left": "s22",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack22_32",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "3/10",
+                                "exp": 0.3
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s22 <- 1",
+                                    "ref": "s22",
+                                    "value": 1
+                                },
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 3/10)",
+                                "exp": 0.7
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s22 = 0)",
+                        "exp": {
+                            "left": "s22",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack23_22",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s22 = 2)",
+                        "exp": {
+                            "left": "s22",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack32_22",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s22 = 2)",
+                        "exp": {
+                            "left": "s22",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "clean_22",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s22 <- 0",
+                                    "ref": "s22",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "clean <- 1",
+                                    "ref": "clean",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s22 = 2)",
+                        "exp": {
+                            "left": "s22",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "n22",
+            "variables": []
+        },
+        {
+            "edges": [
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s32 <- 2",
+                                    "ref": "s32",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s32 <- 0",
+                                    "ref": "s32",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s32 = 1)",
+                        "exp": {
+                            "left": "s32",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack22_32",
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s32 = 2)",
+                        "exp": {
+                            "left": "s32",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack31_32",
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s32 = 2)",
+                        "exp": {
+                            "left": "s32",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack32_22",
+                    "destinations": [
+                        {
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s32 <- 1",
+                                    "ref": "s32",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s32 = 0)",
+                        "exp": {
+                            "left": "s32",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack32_31",
+                    "destinations": [
+                        {
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s32 <- 1",
+                                    "ref": "s32",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s32 = 0)",
+                        "exp": {
+                            "left": "s32",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack32_33",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s32 <- 1",
+                                    "ref": "s32",
+                                    "value": 1
+                                },
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s32 = 0)",
+                        "exp": {
+                            "left": "s32",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack33_32",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s32 = 2)",
+                        "exp": {
+                            "left": "s32",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "clean_32",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s32 <- 0",
+                                    "ref": "s32",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "clean <- 1",
+                                    "ref": "clean",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s32 = 2)",
+                        "exp": {
+                            "left": "s32",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "n32",
+            "variables": []
+        },
+        {
+            "edges": [
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s13 <- 2",
+                                    "ref": "s13",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s13 <- 0",
+                                    "ref": "s13",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s13 = 1)",
+                        "exp": {
+                            "left": "s13",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack12_13",
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s13 = 2)",
+                        "exp": {
+                            "left": "s13",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack13_12",
+                    "destinations": [
+                        {
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s13 <- 1",
+                                    "ref": "s13",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s13 = 0)",
+                        "exp": {
+                            "left": "s13",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack13_23",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s13 <- 1",
+                                    "ref": "s13",
+                                    "value": 1
+                                },
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s13 = 0)",
+                        "exp": {
+                            "left": "s13",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack23_13",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s13 = 2)",
+                        "exp": {
+                            "left": "s13",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "clean_13",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s13 <- 0",
+                                    "ref": "s13",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "clean <- 1",
+                                    "ref": "clean",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s13 = 2)",
+                        "exp": {
+                            "left": "s13",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "n13",
+            "variables": []
+        },
+        {
+            "edges": [
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s23 <- 2",
+                                    "ref": "s23",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s23 <- 0",
+                                    "ref": "s23",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s23 = 1)",
+                        "exp": {
+                            "left": "s23",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack13_23",
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s23 = 2)",
+                        "exp": {
+                            "left": "s23",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack22_23",
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s23 = 2)",
+                        "exp": {
+                            "left": "s23",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack23_13",
+                    "destinations": [
+                        {
+                            "location": "l",
+                            "probability": {
+                                "comment": "3/10",
+                                "exp": 0.3
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s23 <- 1",
+                                    "ref": "s23",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 3/10)",
+                                "exp": 0.7
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s23 = 0)",
+                        "exp": {
+                            "left": "s23",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack23_22",
+                    "destinations": [
+                        {
+                            "location": "l",
+                            "probability": {
+                                "comment": "3/10",
+                                "exp": 0.3
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s23 <- 1",
+                                    "ref": "s23",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 3/10)",
+                                "exp": 0.7
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s23 = 0)",
+                        "exp": {
+                            "left": "s23",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack23_33",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "3/10",
+                                "exp": 0.3
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s23 <- 1",
+                                    "ref": "s23",
+                                    "value": 1
+                                },
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 3/10)",
+                                "exp": 0.7
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s23 = 0)",
+                        "exp": {
+                            "left": "s23",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack33_23",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "attacks <- 1",
+                                    "ref": "attacks",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s23 = 2)",
+                        "exp": {
+                            "left": "s23",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "clean_23",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s23 <- 0",
+                                    "ref": "s23",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "clean <- 1",
+                                    "ref": "clean",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s23 = 2)",
+                        "exp": {
+                            "left": "s23",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "n23",
+            "variables": []
+        },
+        {
+            "edges": [
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s33 <- 2",
+                                    "ref": "s33",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s33 <- 0",
+                                    "ref": "s33",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s33 = 1)",
+                        "exp": {
+                            "left": "s33",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack23_33",
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s33 = 2)",
+                        "exp": {
+                            "left": "s33",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack32_33",
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s33 = 2)",
+                        "exp": {
+                            "left": "s33",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack33_23",
+                    "destinations": [
+                        {
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s33 <- 1",
+                                    "ref": "s33",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s33 = 0)",
+                        "exp": {
+                            "left": "s33",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "attack33_32",
+                    "destinations": [
+                        {
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s33 <- 1",
+                                    "ref": "s33",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s33 = 0)",
+                        "exp": {
+                            "left": "s33",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "clean_33",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s33 <- 0",
+                                    "ref": "s33",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "clean <- 1",
+                                    "ref": "clean",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s33 = 2)",
+                        "exp": {
+                            "left": "s33",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "n33",
+            "variables": []
+        }
+    ],
+    "constants": [
+        {
+            "name": "infect",
+            "type": "real",
+            "value": 0.5
+        },
+        {
+            "name": "detect1",
+            "type": "real",
+            "value": 0.5
+        },
+        {
+            "name": "detect2",
+            "type": "real",
+            "value": 0.3
+        },
+        {
+            "name": "detect11",
+            "type": "real",
+            "value": 0.5
+        },
+        {
+            "name": "detect12",
+            "type": "real",
+            "value": 0.5
+        },
+        {
+            "name": "detect13",
+            "type": "real",
+            "value": 0.5
+        },
+        {
+            "name": "detect21",
+            "type": "real",
+            "value": 0.3
+        },
+        {
+            "name": "detect22",
+            "type": "real",
+            "value": 0.3
+        },
+        {
+            "name": "detect23",
+            "type": "real",
+            "value": 0.3
+        },
+        {
+            "name": "detect31",
+            "type": "real",
+            "value": 0.5
+        },
+        {
+            "name": "detect32",
+            "type": "real",
+            "value": 0.5
+        },
+        {
+            "name": "detect33",
+            "type": "real",
+            "value": 0.5
+        }
+    ],
+    "features": [
+        "derived-operators",
+        "state-exit-rewards",
+        "multi-objective-properties"
+    ],
+    "jani-version": 1,
+    "name": "network-virus.3",
+    "properties": [
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "op": "Multi",
+                    "properties": [
+                        {
+                            "exp": {
+                                "left": {
+                                    "accumulate": [
+                                        "exit"
+                                    ],
+                                    "exp": "withvirus",
+                                    "op": "Smax"
+                                },
+                                "op": "≥",
+                                "right": 8.1
+                            }
+                        },
+                        {
+                            "exp": {
+                                "left": {
+                                    "accumulate": [
+                                        "steps"
+                                    ],
+                                    "exp": "clean",
+                                    "op": "Smax"
+                                },
+                                "op": "≥",
+                                "right": 0.15
+                            }
+                        }
+                    ],
+                    "type": "tradeoff"
+                }
+            },
+            "name": "qual1"
+        },
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "op": "Multi",
+                    "properties": [
+                        {
+                            "exp": {
+                                "left": {
+                                    "accumulate": [
+                                        "exit"
+                                    ],
+                                    "exp": "withvirus",
+                                    "op": "Smax"
+                                },
+                                "op": "≥",
+                                "right": 8.2
+                            }
+                        },
+                        {
+                            "exp": {
+                                "left": {
+                                    "accumulate": [
+                                        "steps"
+                                    ],
+                                    "exp": "clean",
+                                    "op": "Smax"
+                                },
+                                "op": "≥",
+                                "right": 0.15
+                            }
+                        }
+                    ],
+                    "type": "tradeoff"
+                }
+            },
+            "name": "qual2"
+        },
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "op": "Multi",
+                    "properties": [
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "exit"
+                                ],
+                                "exp": "withvirus",
+                                "op": "Smax"
+                            },
+                            "opt": "max"
+                        },
+                        {
+                            "exp": {
+                                "left": {
+                                    "accumulate": [
+                                        "steps"
+                                    ],
+                                    "exp": "clean",
+                                    "op": "Smax"
+                                },
+                                "op": "≥",
+                                "right": 0.15
+                            }
+                        }
+                    ],
+                    "type": "tradeoff"
+                }
+            },
+            "name": "quant"
+        },
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "op": "Multi",
+                    "properties": [
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "exit"
+                                ],
+                                "exp": "withvirus",
+                                "op": "Smax"
+                            },
+                            "opt": "max"
+                        },
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "exp": "clean",
+                                "op": "Smax"
+                            },
+                            "opt": "max"
+                        }
+                    ],
+                    "type": "tradeoff"
+                }
+            },
+            "name": "pareto"
+        }
+    ],
+    "restrict-initial": {
+        "exp": true
+    },
+    "system": {
+        "elements": [
+            {
+                "automaton": "n11"
+            },
+            {
+                "automaton": "n21"
+            },
+            {
+                "automaton": "n31"
+            },
+            {
+                "automaton": "n12"
+            },
+            {
+                "automaton": "n22"
+            },
+            {
+                "automaton": "n32"
+            },
+            {
+                "automaton": "n13"
+            },
+            {
+                "automaton": "n23"
+            },
+            {
+                "automaton": "n33"
+            }
+        ],
+        "syncs": [
+            {
+                "result": "attack11_12",
+                "synchronise": [
+                    "attack11_12",
+                    null,
+                    null,
+                    "attack11_12",
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "attack11_21",
+                "synchronise": [
+                    "attack11_21",
+                    "attack11_21",
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "attack12_11",
+                "synchronise": [
+                    "attack12_11",
+                    null,
+                    null,
+                    "attack12_11",
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "attack12_13",
+                "synchronise": [
+                    null,
+                    null,
+                    null,
+                    "attack12_13",
+                    null,
+                    null,
+                    "attack12_13",
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "attack12_22",
+                "synchronise": [
+                    null,
+                    null,
+                    null,
+                    "attack12_22",
+                    "attack12_22",
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "attack13_12",
+                "synchronise": [
+                    null,
+                    null,
+                    null,
+                    "attack13_12",
+                    null,
+                    null,
+                    "attack13_12",
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "attack13_23",
+                "synchronise": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    "attack13_23",
+                    "attack13_23",
+                    null
+                ]
+            },
+            {
+                "result": "attack21_11",
+                "synchronise": [
+                    "attack21_11",
+                    "attack21_11",
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "attack21_22",
+                "synchronise": [
+                    null,
+                    "attack21_22",
+                    null,
+                    null,
+                    "attack21_22",
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "attack21_31",
+                "synchronise": [
+                    null,
+                    "attack21_31",
+                    "attack21_31",
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "attack22_12",
+                "synchronise": [
+                    null,
+                    null,
+                    null,
+                    "attack22_12",
+                    "attack22_12",
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "attack22_21",
+                "synchronise": [
+                    null,
+                    "attack22_21",
+                    null,
+                    null,
+                    "attack22_21",
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "attack22_23",
+                "synchronise": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    "attack22_23",
+                    null,
+                    null,
+                    "attack22_23",
+                    null
+                ]
+            },
+            {
+                "result": "attack22_32",
+                "synchronise": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    "attack22_32",
+                    "attack22_32",
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "attack23_13",
+                "synchronise": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    "attack23_13",
+                    "attack23_13",
+                    null
+                ]
+            },
+            {
+                "result": "attack23_22",
+                "synchronise": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    "attack23_22",
+                    null,
+                    null,
+                    "attack23_22",
+                    null
+                ]
+            },
+            {
+                "result": "attack23_33",
+                "synchronise": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    "attack23_33",
+                    "attack23_33"
+                ]
+            },
+            {
+                "result": "attack31_21",
+                "synchronise": [
+                    null,
+                    "attack31_21",
+                    "attack31_21",
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "attack31_32",
+                "synchronise": [
+                    null,
+                    null,
+                    "attack31_32",
+                    null,
+                    null,
+                    "attack31_32",
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "attack32_22",
+                "synchronise": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    "attack32_22",
+                    "attack32_22",
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "attack32_31",
+                "synchronise": [
+                    null,
+                    null,
+                    "attack32_31",
+                    null,
+                    null,
+                    "attack32_31",
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "attack32_33",
+                "synchronise": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    "attack32_33",
+                    null,
+                    null,
+                    "attack32_33"
+                ]
+            },
+            {
+                "result": "attack33_23",
+                "synchronise": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    "attack33_23",
+                    "attack33_23"
+                ]
+            },
+            {
+                "result": "attack33_32",
+                "synchronise": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    "attack33_32",
+                    null,
+                    null,
+                    "attack33_32"
+                ]
+            },
+            {
+                "result": "clean_11",
+                "synchronise": [
+                    "clean_11",
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "clean_12",
+                "synchronise": [
+                    null,
+                    null,
+                    null,
+                    "clean_12",
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "clean_13",
+                "synchronise": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    "clean_13",
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "clean_21",
+                "synchronise": [
+                    null,
+                    "clean_21",
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "clean_22",
+                "synchronise": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    "clean_22",
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "clean_23",
+                "synchronise": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    "clean_23",
+                    null
+                ]
+            },
+            {
+                "result": "clean_31",
+                "synchronise": [
+                    null,
+                    null,
+                    "clean_31",
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "clean_32",
+                "synchronise": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    "clean_32",
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "clean_33",
+                "synchronise": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    "clean_33"
+                ]
+            }
+        ]
+    },
+    "type": "mdp",
+    "variables": [
+        {
+            "initial-value": 0.0,
+            "name": "attacks",
+            "transient": true,
+            "type": "real"
+        },
+        {
+            "initial-value": 0.0,
+            "name": "clean",
+            "transient": true,
+            "type": "real"
+        },
+        {
+            "initial-value": 0.0,
+            "name": "withvirus",
+            "transient": true,
+            "type": "real"
+        },
+        {
+            "initial-value": 0,
+            "name": "s11",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": 2
+            }
+        },
+        {
+            "initial-value": 0,
+            "name": "s21",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": 2
+            }
+        },
+        {
+            "initial-value": 0,
+            "name": "s31",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": 2
+            }
+        },
+        {
+            "initial-value": 0,
+            "name": "s12",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": 2
+            }
+        },
+        {
+            "initial-value": 0,
+            "name": "s22",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": 2
+            }
+        },
+        {
+            "initial-value": 0,
+            "name": "s32",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": 2
+            }
+        },
+        {
+            "initial-value": 0,
+            "name": "s13",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": 2
+            }
+        },
+        {
+            "initial-value": 0,
+            "name": "s23",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": 2
+            }
+        },
+        {
+            "initial-value": 2,
+            "name": "s33",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": 2
+            }
+        }
+    ]
+}

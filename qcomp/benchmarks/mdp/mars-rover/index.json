@@ -1,0 +1,236 @@
+{
+	"name": "Mars Rover",
+	"short": "mars-rover",
+	"type": "mdp",
+	"original": "PRISM",
+	"version": 1,
+	"date": "2025-11-13",
+	"version-history": [
+		{
+			"date": "2025-11-13",
+			"notes": "Initial version.",
+			"version": 1
+		}
+	],
+	"author": [
+		"Arnd Hartmanns",
+		"Sebastian Junges",
+		"Joost-Pieter Katoen",
+		"Tim Quatmann"
+	],
+	"submitter": "Mark van Wijk <mark.vanwijk@utwente.nl>",
+	"source": "https://github.com/tquatmann/qcomp23-multi/tree/main/models/rov",
+	"part-of": {
+		"name": "QComp 2023 multi-objective",
+		"url": "https://github.com/tquatmann/qcomp23-multi"
+	},
+	"description": "This model was part of the multi-objective benchmarking suite for QComp 2023 [0]. We consider a Mars rover that has to plan tasks with probabilistic success, under time, energy, and scientific value constraints. See [1] for more details",
+	"references": [
+		"https://doi.org/10.1007/s10817-020-09574-9"
+	],
+	"notes": "QComp 2023 multi-objective benchmark",
+	"parameters": [
+		{
+			"name": "Unf",
+			"kind": "open",
+			"description": "0: Don't unfold any rewards, 1: Unfold the value rewards, 2: Unfold all rewards",
+			"type": "positive integer"
+		},
+		{
+			"name": "B",
+			"kind": "open",
+			"description": "Magnitude of bounds for global rewards",
+			"type": "positive integer"
+		}
+	],
+	"properties": [
+		{
+			"name": "lazy",
+			"description": "The tradeoff between the minimum time and energy spent.",
+			"type": "multi-tradeoff"
+		},
+		{
+			"name": "max_value_bounded",
+			"description": "The maximum probability of obtaining at least a given scientific value, while staying in the time and energy constraints.",
+			"type": "prob-reach-reward-bounded"
+		},
+		{
+			"name": "bounded_tradeoff",
+			"description": "The maximum probability of obtaining any value without exceeding time or energy constraints.",
+			"type": "multi-tradeoff"
+		},
+		{
+			"name": "safe_collection",
+			"description": "The maximum probability of obtaining at least a given scientific value, while staying in the time and energy constraints.",
+			"type": "prob-reach"
+		},
+		{
+			"name": "safe_collection_tradeoff",
+			"description": "The tradeoff between maximising the probability of obtaining at least a given scientific value, and the maximum probability of staying in the time and energy constraints.",
+			"type": "multi-tradeoff"
+		}
+	],
+	"files": [
+		{
+			"file": "mars-rover.jani",
+			"original-file": [
+				"mars-rover.prism",
+				"mars-rover.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism mars-rover.prism --prop mars-rover.props --tojani mars-rover.jani"
+			},
+			"file-parameter-values": [],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "Unf",
+							"value": 1
+						},
+						{
+							"name": "B",
+							"value": 10
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "Unf",
+							"value": 2
+						},
+						{
+							"name": "B",
+							"value": 10
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "Unf",
+							"value": 1
+						},
+						{
+							"name": "B",
+							"value": 20
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "Unf",
+							"value": 2
+						},
+						{
+							"name": "B",
+							"value": 20
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "Unf",
+							"value": 1
+						},
+						{
+							"name": "B",
+							"value": 30
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "Unf",
+							"value": 2
+						},
+						{
+							"name": "B",
+							"value": 30
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "Unf",
+							"value": 1
+						},
+						{
+							"name": "B",
+							"value": 100
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "Unf",
+							"value": 2
+						},
+						{
+							"name": "B",
+							"value": 100
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "Unf",
+							"value": 1
+						},
+						{
+							"name": "B",
+							"value": 500
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "Unf",
+							"value": 2
+						},
+						{
+							"name": "B",
+							"value": 500
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "Unf",
+							"value": 1
+						},
+						{
+							"name": "B",
+							"value": 1000
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "Unf",
+							"value": 2
+						},
+						{
+							"name": "B",
+							"value": 1000
+						}
+					]
+				}
+			]
+		}
+	],
+	"results": []
+}

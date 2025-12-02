@@ -1,0 +1,115 @@
+{
+	"name": "Care Home",
+	"short": "care-home",
+	"type": "mdp",
+	"original": "PRISM",
+	"version": 1,
+	"date": "2025-11-13",
+	"version-history": [
+		{
+			"date": "2025-11-13",
+			"notes": "Initial version.",
+			"version": 1
+		}
+	],
+	"author": [
+		"Bruno Lacerda",
+		"David Parker",
+		"Nick Hawes"
+	],
+	"submitter": "Mark van Wijk <mark.vanwijk@utwente.nl>",
+	"source": "https://github.com/tquatmann/qcomp23-multi/tree/main/models/srv",
+	"part-of": {
+		"name": "QComp 2023 multi-objective",
+		"url": "https://github.com/tquatmann/qcomp23-multi"
+	},
+	"description": "This model was part of the multi-objective benchmarking suite for QComp 2023 [0]. We consider a robot in a care home which has to make deliveries and entertain patients. See [1] for more details",
+	"references": [
+		"https://doi.org/10.1609/icaps.v27i1.13865"
+	],
+	"notes": "QComp 2023 multi-objective benchmark",
+	"parameters": [
+		{
+			"name": "Unf",
+			"kind": "open",
+			"description": "0: Don't unfold any rewards, 1: Unfold the value rewards, 2: Unfold all rewards",
+			"type": "positive integer"
+		},
+		{
+			"name": "B",
+			"kind": "open",
+			"description": "Magnitude of reward bounds",
+			"type": "positive integer"
+		}
+	],
+	"properties": [
+		{
+			"name": "social",
+			"description": "The tradeoff between the minimising time spent, while maximising interaction.",
+			"type": "multi-tradeoff"
+		},
+		{
+			"name": "performant",
+			"description": "The maximum probability of finishing the task, while staying in time bounds.",
+			"type": "prob-reach-reward-bounded"
+		},
+		{
+			"name": "efficient_bounded",
+			"description": "The tradeoff between the maximum probability and interaction, while staying in time bounds.",
+			"type": "multi-tradeoff"
+		},
+		{
+			"name": "effective",
+			"description": "The maximum probability of finishing the task, without exceeding time.",
+			"type": "prob-reach"
+		},
+		{
+			"name": "efficient",
+			"description": "The tradeoff between maximising the probability of finishing the task and maximising interaction, before the time is exceeded.",
+			"type": "multi-tradeoff"
+		}
+	],
+	"files": [
+		{
+			"file": "care-home.jani",
+			"original-file": [
+				"care-home.prism",
+				"care-home.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism care-home.prism --prop care-home.props --tojani care-home.jani"
+			},
+			"file-parameter-values": [],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "Unf",
+							"value": 0
+						},
+						{
+							"name": "B",
+							"value": 0
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "Unf",
+							"value": 1
+						},
+						{
+							"name": "B",
+							"value": 160
+						}
+					]
+				}
+			]
+		}
+	],
+	"results": []
+}

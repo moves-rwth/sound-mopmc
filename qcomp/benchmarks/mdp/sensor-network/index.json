@@ -1,0 +1,149 @@
+{
+	"name": "Wireless Sensor Network",
+	"short": "sensor-network",
+	"type": "mdp",
+	"original": "PRISM",
+	"version": 1,
+	"date": "2025-11-13",
+	"version-history": [
+		{
+			"date": "2025-11-13",
+			"notes": "Initial version.",
+			"version": 1
+		}
+	],
+	"author": [
+		"Anvesh Komuravelli",
+		"Corina S. Păsăreanu",
+		"Edmund M. Clarke"
+	],
+	"submitter": "Mark van Wijk <mark.vanwijk@utwente.nl>",
+	"source": "https://github.com/tquatmann/qcomp23-multi/tree/main/models/sen",
+	"part-of": {
+		"name": "QComp 2023 multi-objective",
+		"url": "https://github.com/tquatmann/qcomp23-multi"
+	},
+	"description": "This model was part of the multi-objective benchmarking suite for QComp 2023 [0]. We consider a client-server protocol with a probabilistic mutual exclusion failure for clients. See [1] for more details",
+	"references": [
+		"https://doi.org/10.1007/978-3-642-31424-7_25"
+	],
+	"notes": "QComp 2023 multi-objective benchmark",
+	"parameters": [
+		{
+			"name": "N",
+			"kind": "file",
+			"description": "Number of sensors",
+			"type": "positive integer"
+		}
+	],
+	"properties": [
+		{
+			"name": "pareto",
+			"description": "The tradeoff between maximising the time spent working and success, while minimising the failure.",
+			"type": "multi-tradeoff"
+		}
+	],
+	"files": [
+		{
+			"file": "sensor-network.1.jani",
+			"original-file": [
+				"sensor-network.1.prism",
+				"sensor-network.1.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism sensor-network.1.prism --prop sensor-network.1.props --tojani sensor-network.1.jani"
+			},
+			"open-parameter-values": [],
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 1
+				}
+			]
+		},
+		{
+			"file": "sensor-network.2.jani",
+			"original-file": [
+				"sensor-network.2.prism",
+				"sensor-network.2.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism sensor-network.2.prism --prop sensor-network.2.props --tojani sensor-network.2.jani"
+			},
+			"open-parameter-values": [],
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 2
+				}
+			]
+		},
+		{
+			"file": "sensor-network.3.jani",
+			"original-file": [
+				"sensor-network.3.prism",
+				"sensor-network.3.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism sensor-network.3.prism --prop sensor-network.3.props --tojani sensor-network.3.jani"
+			},
+			"open-parameter-values": [],
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 3
+				}
+			]
+		},
+		{
+			"file": "sensor-network.4.jani",
+			"original-file": [
+				"sensor-network.4.prism",
+				"sensor-network.4.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism sensor-network.4.prism --prop sensor-network.4.props --tojani sensor-network.4.jani"
+			},
+			"open-parameter-values": [],
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 4
+				}
+			]
+		},
+		{
+			"file": "sensor-network.5.jani",
+			"original-file": [
+				"sensor-network.5.prism",
+				"sensor-network.5.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism sensor-network.5.prism --prop sensor-network.5.props --tojani sensor-network.5.jani"
+			},
+			"open-parameter-values": [],
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 5
+				}
+			]
+		}
+	],
+	"results": []
+}

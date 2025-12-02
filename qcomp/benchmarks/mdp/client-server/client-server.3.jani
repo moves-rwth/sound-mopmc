@@ -1,0 +1,1865 @@
+{
+    "actions": [
+        {
+            "name": "client1_cancel"
+        },
+        {
+            "name": "client1_ch_mind"
+        },
+        {
+            "name": "client1_deny"
+        },
+        {
+            "name": "client1_grant"
+        },
+        {
+            "name": "client1_request"
+        },
+        {
+            "name": "client1_useResource"
+        },
+        {
+            "name": "client2_cancel"
+        },
+        {
+            "name": "client2_ch_mind"
+        },
+        {
+            "name": "client2_deny"
+        },
+        {
+            "name": "client2_grant"
+        },
+        {
+            "name": "client2_request"
+        },
+        {
+            "name": "client2_useResource"
+        },
+        {
+            "name": "client3_cancel"
+        },
+        {
+            "name": "client3_ch_mind"
+        },
+        {
+            "name": "client3_deny"
+        },
+        {
+            "name": "client3_grant"
+        },
+        {
+            "name": "client3_request"
+        },
+        {
+            "name": "client3_useResource"
+        }
+    ],
+    "automata": [
+        {
+            "edges": [
+                {
+                    "action": "client1_cancel",
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s = 0)",
+                        "exp": {
+                            "left": "s",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client1_cancel",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s <- 0",
+                                    "ref": "s",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "i <- 0",
+                                    "ref": "i",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s = 2) & (i = 1))",
+                        "exp": {
+                            "left": {
+                                "left": "s",
+                                "op": "=",
+                                "right": 2
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "i",
+                                "op": "=",
+                                "right": 1
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client1_cancel",
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s = 2) & (i != 1))",
+                        "exp": {
+                            "left": {
+                                "left": "s",
+                                "op": "=",
+                                "right": 2
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "i",
+                                "op": "≠",
+                                "right": 1
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client1_deny",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s <- 2",
+                                    "ref": "s",
+                                    "value": 2
+                                },
+                                {
+                                    "comment": "j <- 0",
+                                    "ref": "j",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s = 3) & (j = 1))",
+                        "exp": {
+                            "left": {
+                                "left": "s",
+                                "op": "=",
+                                "right": 3
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "j",
+                                "op": "=",
+                                "right": 1
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client1_grant",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s <- 2",
+                                    "ref": "s",
+                                    "value": 2
+                                },
+                                {
+                                    "comment": "grants <- 1",
+                                    "ref": "grants",
+                                    "value": 1
+                                },
+                                {
+                                    "comment": "grants1 <- 1",
+                                    "ref": "grants1",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s = 1) & (i = 1))",
+                        "exp": {
+                            "left": {
+                                "left": "s",
+                                "op": "=",
+                                "right": 1
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "i",
+                                "op": "=",
+                                "right": 1
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client1_request",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s <- 1",
+                                    "ref": "s",
+                                    "value": 1
+                                },
+                                {
+                                    "comment": "i <- 1",
+                                    "ref": "i",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s = 0)",
+                        "exp": {
+                            "left": "s",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client1_request",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s <- 3",
+                                    "ref": "s",
+                                    "value": 3
+                                },
+                                {
+                                    "comment": "j <- 1",
+                                    "ref": "j",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s = 2)",
+                        "exp": {
+                            "left": "s",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client2_cancel",
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s = 0)",
+                        "exp": {
+                            "left": "s",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client2_cancel",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s <- 0",
+                                    "ref": "s",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "i <- 0",
+                                    "ref": "i",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s = 2) & (i = 2))",
+                        "exp": {
+                            "left": {
+                                "left": "s",
+                                "op": "=",
+                                "right": 2
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "i",
+                                "op": "=",
+                                "right": 2
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client2_cancel",
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s = 2) & (i != 2))",
+                        "exp": {
+                            "left": {
+                                "left": "s",
+                                "op": "=",
+                                "right": 2
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "i",
+                                "op": "≠",
+                                "right": 2
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client2_deny",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s <- 2",
+                                    "ref": "s",
+                                    "value": 2
+                                },
+                                {
+                                    "comment": "j <- 0",
+                                    "ref": "j",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s = 3) & (j = 2))",
+                        "exp": {
+                            "left": {
+                                "left": "s",
+                                "op": "=",
+                                "right": 3
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "j",
+                                "op": "=",
+                                "right": 2
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client2_grant",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s <- 2",
+                                    "ref": "s",
+                                    "value": 2
+                                },
+                                {
+                                    "comment": "grants <- 1",
+                                    "ref": "grants",
+                                    "value": 1
+                                },
+                                {
+                                    "comment": "grants2 <- 1",
+                                    "ref": "grants2",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s = 1) & (i = 2))",
+                        "exp": {
+                            "left": {
+                                "left": "s",
+                                "op": "=",
+                                "right": 1
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "i",
+                                "op": "=",
+                                "right": 2
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client2_request",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s <- 1",
+                                    "ref": "s",
+                                    "value": 1
+                                },
+                                {
+                                    "comment": "i <- 2",
+                                    "ref": "i",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s = 0)",
+                        "exp": {
+                            "left": "s",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client2_request",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s <- 3",
+                                    "ref": "s",
+                                    "value": 3
+                                },
+                                {
+                                    "comment": "j <- 2",
+                                    "ref": "j",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s = 2)",
+                        "exp": {
+                            "left": "s",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client3_cancel",
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s = 0)",
+                        "exp": {
+                            "left": "s",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client3_cancel",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s <- 0",
+                                    "ref": "s",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "i <- 0",
+                                    "ref": "i",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s = 2) & (i = 3))",
+                        "exp": {
+                            "left": {
+                                "left": "s",
+                                "op": "=",
+                                "right": 2
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "i",
+                                "op": "=",
+                                "right": 3
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client3_cancel",
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s = 2) & (i != 3))",
+                        "exp": {
+                            "left": {
+                                "left": "s",
+                                "op": "=",
+                                "right": 2
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "i",
+                                "op": "≠",
+                                "right": 3
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client3_deny",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s <- 2",
+                                    "ref": "s",
+                                    "value": 2
+                                },
+                                {
+                                    "comment": "j <- 0",
+                                    "ref": "j",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s = 3) & (j = 3))",
+                        "exp": {
+                            "left": {
+                                "left": "s",
+                                "op": "=",
+                                "right": 3
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "j",
+                                "op": "=",
+                                "right": 3
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client3_grant",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s <- 2",
+                                    "ref": "s",
+                                    "value": 2
+                                },
+                                {
+                                    "comment": "grants <- 1",
+                                    "ref": "grants",
+                                    "value": 1
+                                },
+                                {
+                                    "comment": "grants3 <- 1",
+                                    "ref": "grants3",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s = 1) & (i = 3))",
+                        "exp": {
+                            "left": {
+                                "left": "s",
+                                "op": "=",
+                                "right": 1
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "i",
+                                "op": "=",
+                                "right": 3
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client3_request",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s <- 1",
+                                    "ref": "s",
+                                    "value": 1
+                                },
+                                {
+                                    "comment": "i <- 3",
+                                    "ref": "i",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s = 0)",
+                        "exp": {
+                            "left": "s",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client3_request",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s <- 3",
+                                    "ref": "s",
+                                    "value": 3
+                                },
+                                {
+                                    "comment": "j <- 3",
+                                    "ref": "j",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s = 2)",
+                        "exp": {
+                            "left": "s",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "server",
+            "variables": [
+                {
+                    "initial-value": 0,
+                    "name": "s",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 3
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "i",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 3
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "j",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 3
+                    }
+                }
+            ]
+        },
+        {
+            "edges": [
+                {
+                    "action": "client1_cancel",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "c1 <- 0",
+                                    "ref": "c1",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(c1 = 2)",
+                        "exp": {
+                            "left": "c1",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client1_cancel",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "c1 <- 1",
+                                    "ref": "c1",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(c1 = 3)",
+                        "exp": {
+                            "left": "c1",
+                            "op": "=",
+                            "right": 3
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client1_ch_mind",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "c1 <- 0",
+                                    "ref": "c1",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "9/10",
+                                "exp": {
+                                    "left": 9.0,
+                                    "op": "/",
+                                    "right": 10.0
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "c1 <- 3",
+                                    "ref": "c1",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/10",
+                                "exp": {
+                                    "left": 1.0,
+                                    "op": "/",
+                                    "right": 10.0
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(c1 = -(1))",
+                        "exp": {
+                            "left": "c1",
+                            "op": "=",
+                            "right": -1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client1_deny",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "c1 <- 0",
+                                    "ref": "c1",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(c1 = 1)",
+                        "exp": {
+                            "left": "c1",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client1_grant",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "c1 <- 2",
+                                    "ref": "c1",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(c1 = 1)",
+                        "exp": {
+                            "left": "c1",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client1_request",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "c1 <- 1",
+                                    "ref": "c1",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(c1 = 0)",
+                        "exp": {
+                            "left": "c1",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client1_useResource",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "c1 <- 2",
+                                    "ref": "c1",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(c1 = 2)",
+                        "exp": {
+                            "left": "c1",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "client1",
+            "variables": [
+                {
+                    "initial-value": -1,
+                    "name": "c1",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": -1,
+                        "upper-bound": 3
+                    }
+                }
+            ]
+        },
+        {
+            "edges": [
+                {
+                    "action": "client2_cancel",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "c2 <- 0",
+                                    "ref": "c2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(c2 = 2)",
+                        "exp": {
+                            "left": "c2",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client2_cancel",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "c2 <- 1",
+                                    "ref": "c2",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(c2 = 3)",
+                        "exp": {
+                            "left": "c2",
+                            "op": "=",
+                            "right": 3
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client2_ch_mind",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "c2 <- 0",
+                                    "ref": "c2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "9/10",
+                                "exp": {
+                                    "left": 9.0,
+                                    "op": "/",
+                                    "right": 10.0
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "c2 <- 3",
+                                    "ref": "c2",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/10",
+                                "exp": {
+                                    "left": 1.0,
+                                    "op": "/",
+                                    "right": 10.0
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(c2 = -(1))",
+                        "exp": {
+                            "left": "c2",
+                            "op": "=",
+                            "right": -1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client2_deny",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "c2 <- 0",
+                                    "ref": "c2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(c2 = 1)",
+                        "exp": {
+                            "left": "c2",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client2_grant",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "c2 <- 2",
+                                    "ref": "c2",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(c2 = 1)",
+                        "exp": {
+                            "left": "c2",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client2_request",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "c2 <- 1",
+                                    "ref": "c2",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(c2 = 0)",
+                        "exp": {
+                            "left": "c2",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client2_useResource",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "c2 <- 2",
+                                    "ref": "c2",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(c2 = 2)",
+                        "exp": {
+                            "left": "c2",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "client2",
+            "variables": [
+                {
+                    "initial-value": -1,
+                    "name": "c2",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": -1,
+                        "upper-bound": 3
+                    }
+                }
+            ]
+        },
+        {
+            "edges": [
+                {
+                    "action": "client3_cancel",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "c3 <- 0",
+                                    "ref": "c3",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(c3 = 2)",
+                        "exp": {
+                            "left": "c3",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client3_cancel",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "c3 <- 1",
+                                    "ref": "c3",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(c3 = 3)",
+                        "exp": {
+                            "left": "c3",
+                            "op": "=",
+                            "right": 3
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client3_ch_mind",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "c3 <- 0",
+                                    "ref": "c3",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "9/10",
+                                "exp": {
+                                    "left": 9.0,
+                                    "op": "/",
+                                    "right": 10.0
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "c3 <- 3",
+                                    "ref": "c3",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/10",
+                                "exp": {
+                                    "left": 1.0,
+                                    "op": "/",
+                                    "right": 10.0
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(c3 = -(1))",
+                        "exp": {
+                            "left": "c3",
+                            "op": "=",
+                            "right": -1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client3_deny",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "c3 <- 0",
+                                    "ref": "c3",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(c3 = 1)",
+                        "exp": {
+                            "left": "c3",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client3_grant",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "c3 <- 2",
+                                    "ref": "c3",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(c3 = 1)",
+                        "exp": {
+                            "left": "c3",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client3_request",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "c3 <- 1",
+                                    "ref": "c3",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(c3 = 0)",
+                        "exp": {
+                            "left": "c3",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "client3_useResource",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "c3 <- 2",
+                                    "ref": "c3",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(c3 = 2)",
+                        "exp": {
+                            "left": "c3",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "client3",
+            "variables": [
+                {
+                    "initial-value": -1,
+                    "name": "c3",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": -1,
+                        "upper-bound": 3
+                    }
+                }
+            ]
+        }
+    ],
+    "constants": [],
+    "features": [
+        "derived-operators",
+        "multi-objective-properties"
+    ],
+    "jani-version": 1,
+    "name": "client-server.3",
+    "properties": [
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "op": "Multi",
+                    "properties": [
+                        {
+                            "exp": {
+                                "left": {
+                                    "accumulate": [
+                                        "steps"
+                                    ],
+                                    "exp": "grants1",
+                                    "op": "Smax"
+                                },
+                                "op": "≥",
+                                "right": {
+                                    "left": 1.0,
+                                    "op": "/",
+                                    "right": 50.0
+                                }
+                            }
+                        },
+                        {
+                            "exp": {
+                                "left": {
+                                    "accumulate": [
+                                        "steps"
+                                    ],
+                                    "exp": "grants2",
+                                    "op": "Smax"
+                                },
+                                "op": "≥",
+                                "right": {
+                                    "left": 7.0,
+                                    "op": "/",
+                                    "right": 25.0
+                                }
+                            }
+                        },
+                        {
+                            "exp": {
+                                "left": {
+                                    "accumulate": [
+                                        "steps"
+                                    ],
+                                    "exp": "grants3",
+                                    "op": "Smax"
+                                },
+                                "op": "≥",
+                                "right": {
+                                    "left": 7.0,
+                                    "op": "/",
+                                    "right": 250.0
+                                }
+                            }
+                        }
+                    ],
+                    "type": "tradeoff"
+                }
+            },
+            "name": "qual1"
+        },
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "op": "Multi",
+                    "properties": [
+                        {
+                            "exp": {
+                                "left": {
+                                    "accumulate": [
+                                        "steps"
+                                    ],
+                                    "exp": "grants1",
+                                    "op": "Smax"
+                                },
+                                "op": "≥",
+                                "right": 0.03
+                            }
+                        },
+                        {
+                            "exp": {
+                                "left": {
+                                    "accumulate": [
+                                        "steps"
+                                    ],
+                                    "exp": "grants2",
+                                    "op": "Smax"
+                                },
+                                "op": "≥",
+                                "right": {
+                                    "left": 7.0,
+                                    "op": "/",
+                                    "right": 25.0
+                                }
+                            }
+                        },
+                        {
+                            "exp": {
+                                "left": {
+                                    "accumulate": [
+                                        "steps"
+                                    ],
+                                    "exp": "grants3",
+                                    "op": "Smax"
+                                },
+                                "op": "≥",
+                                "right": {
+                                    "left": 7.0,
+                                    "op": "/",
+                                    "right": 250.0
+                                }
+                            }
+                        }
+                    ],
+                    "type": "tradeoff"
+                }
+            },
+            "name": "qual2"
+        },
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "op": "Multi",
+                    "properties": [
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "exp": "grants1",
+                                "op": "Smax"
+                            },
+                            "opt": "max"
+                        },
+                        {
+                            "exp": {
+                                "left": {
+                                    "accumulate": [
+                                        "steps"
+                                    ],
+                                    "exp": "grants2",
+                                    "op": "Smax"
+                                },
+                                "op": "≥",
+                                "right": {
+                                    "left": 7.0,
+                                    "op": "/",
+                                    "right": 25.0
+                                }
+                            }
+                        },
+                        {
+                            "exp": {
+                                "left": {
+                                    "accumulate": [
+                                        "steps"
+                                    ],
+                                    "exp": "grants3",
+                                    "op": "Smax"
+                                },
+                                "op": "≥",
+                                "right": {
+                                    "left": 7.0,
+                                    "op": "/",
+                                    "right": 250.0
+                                }
+                            }
+                        }
+                    ],
+                    "type": "tradeoff"
+                }
+            },
+            "name": "quant"
+        },
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "op": "Multi",
+                    "properties": [
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "exp": "grants1",
+                                "op": "Smax"
+                            },
+                            "opt": "max"
+                        },
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "exp": "grants2",
+                                "op": "Smax"
+                            },
+                            "opt": "max"
+                        },
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "exp": "grants3",
+                                "op": "Smax"
+                            },
+                            "opt": "max"
+                        }
+                    ],
+                    "type": "tradeoff"
+                }
+            },
+            "name": "pareto"
+        }
+    ],
+    "restrict-initial": {
+        "exp": true
+    },
+    "system": {
+        "elements": [
+            {
+                "automaton": "server"
+            },
+            {
+                "automaton": "client1"
+            },
+            {
+                "automaton": "client2"
+            },
+            {
+                "automaton": "client3"
+            }
+        ],
+        "syncs": [
+            {
+                "result": "client1_cancel",
+                "synchronise": [
+                    "client1_cancel",
+                    "client1_cancel",
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "client1_ch_mind",
+                "synchronise": [
+                    null,
+                    "client1_ch_mind",
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "client1_deny",
+                "synchronise": [
+                    "client1_deny",
+                    "client1_deny",
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "client1_grant",
+                "synchronise": [
+                    "client1_grant",
+                    "client1_grant",
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "client1_request",
+                "synchronise": [
+                    "client1_request",
+                    "client1_request",
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "client1_useResource",
+                "synchronise": [
+                    null,
+                    "client1_useResource",
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "client2_cancel",
+                "synchronise": [
+                    "client2_cancel",
+                    null,
+                    "client2_cancel",
+                    null
+                ]
+            },
+            {
+                "result": "client2_ch_mind",
+                "synchronise": [
+                    null,
+                    null,
+                    "client2_ch_mind",
+                    null
+                ]
+            },
+            {
+                "result": "client2_deny",
+                "synchronise": [
+                    "client2_deny",
+                    null,
+                    "client2_deny",
+                    null
+                ]
+            },
+            {
+                "result": "client2_grant",
+                "synchronise": [
+                    "client2_grant",
+                    null,
+                    "client2_grant",
+                    null
+                ]
+            },
+            {
+                "result": "client2_request",
+                "synchronise": [
+                    "client2_request",
+                    null,
+                    "client2_request",
+                    null
+                ]
+            },
+            {
+                "result": "client2_useResource",
+                "synchronise": [
+                    null,
+                    null,
+                    "client2_useResource",
+                    null
+                ]
+            },
+            {
+                "result": "client3_cancel",
+                "synchronise": [
+                    "client3_cancel",
+                    null,
+                    null,
+                    "client3_cancel"
+                ]
+            },
+            {
+                "result": "client3_ch_mind",
+                "synchronise": [
+                    null,
+                    null,
+                    null,
+                    "client3_ch_mind"
+                ]
+            },
+            {
+                "result": "client3_deny",
+                "synchronise": [
+                    "client3_deny",
+                    null,
+                    null,
+                    "client3_deny"
+                ]
+            },
+            {
+                "result": "client3_grant",
+                "synchronise": [
+                    "client3_grant",
+                    null,
+                    null,
+                    "client3_grant"
+                ]
+            },
+            {
+                "result": "client3_request",
+                "synchronise": [
+                    "client3_request",
+                    null,
+                    null,
+                    "client3_request"
+                ]
+            },
+            {
+                "result": "client3_useResource",
+                "synchronise": [
+                    null,
+                    null,
+                    null,
+                    "client3_useResource"
+                ]
+            }
+        ]
+    },
+    "type": "mdp",
+    "variables": [
+        {
+            "initial-value": 0.0,
+            "name": "grants",
+            "transient": true,
+            "type": "real"
+        },
+        {
+            "initial-value": 0.0,
+            "name": "grants1",
+            "transient": true,
+            "type": "real"
+        },
+        {
+            "initial-value": 0.0,
+            "name": "grants2",
+            "transient": true,
+            "type": "real"
+        },
+        {
+            "initial-value": 0.0,
+            "name": "grants3",
+            "transient": true,
+            "type": "real"
+        }
+    ]
+}

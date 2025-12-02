@@ -1,0 +1,1 @@
+"pareto": multi(R{"working"}max=? [S], R{"success"}max=? [S], R{"failure"}min=? [S]);

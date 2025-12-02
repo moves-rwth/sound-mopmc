@@ -1,0 +1,124 @@
+{
+	"name": "Client-Server Mutual Exclusion Protocol",
+	"short": "client-server",
+	"type": "mdp",
+	"original": "PRISM",
+	"version": 1,
+	"date": "2025-11-13",
+	"version-history": [
+		{
+			"date": "2025-11-13",
+			"notes": "Initial version.",
+			"version": 1
+		}
+	],
+	"author": [
+		"Anvesh Komuravelli",
+		"Corina S. Păsăreanu",
+		"Edmund M. Clarke"
+	],
+	"submitter": "Mark van Wijk <mark.vanwijk@utwente.nl>",
+	"source": "https://github.com/tquatmann/qcomp23-multi/tree/main/models/csn",
+	"part-of": {
+		"name": "QComp 2023 multi-objective",
+		"url": "https://github.com/tquatmann/qcomp23-multi"
+	},
+	"description": "This model was part of the multi-objective benchmarking suite for QComp 2023 [0]. We consider a client-server protocol with a probabilistic mutual exclusion failure for clients. See [1] for more details",
+	"references": [
+		"https://doi.org/10.1007/978-3-642-31424-7_25"
+	],
+	"notes": "QComp 2023 multi-objective benchmark",
+	"parameters": [
+		{
+			"name": "N",
+			"kind": "file",
+			"description": "Number of clients",
+			"type": "positive integer"
+		}
+	],
+	"properties": [
+		{
+			"name": "qual1",
+			"description": "Whether it is possible to obtain at least as many grants for each client as given.",
+			"type": "multi-tradeoff"
+		},
+		{
+			"name": "qual2",
+			"description": "Whether it is possible to obtain at least as many grants for each client as given.",
+			"type": "multi-tradeoff"
+		},
+		{
+			"name": "quant",
+			"description": "The maximum number of grants for client 1 given that each client needs at least as many clients as given.",
+			"type": "multi-tradeoff"
+		},
+		{
+			"name": "pareto",
+			"description": "The tradeoff between the grants for each client.",
+			"type": "multi-tradeoff"
+		}
+	],
+	"files": [
+		{
+			"file": "client-server.3.jani",
+			"original-file": [
+				"client-server.3.prism",
+				"client-server.3.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism client-server.3.prism --prop client-server.3.props --tojani client-server.3.jani"
+			},
+			"open-parameter-values": [],
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 3
+				}
+			]
+		},
+		{
+			"file": "client-server.4.jani",
+			"original-file": [
+				"client-server.4.prism",
+				"client-server.4.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism client-server.4.prism --prop client-server.4.props --tojani client-server.4.jani"
+			},
+			"open-parameter-values": [],
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 4
+				}
+			]
+		},
+		{
+			"file": "client-server.5.jani",
+			"original-file": [
+				"client-server.5.prism",
+				"client-server.5.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism client-server.5.prism --prop client-server.5.props --tojani client-server.5.jani"
+			},
+			"open-parameter-values": [],
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 5
+				}
+			]
+		}
+	],
+	"results": []
+}

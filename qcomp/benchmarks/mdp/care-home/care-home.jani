@@ -1,0 +1,3619 @@
+{
+    "actions": [
+        {
+            "name": "check_water"
+        },
+        {
+            "name": "deliver_water"
+        },
+        {
+            "name": "get_water"
+        },
+        {
+            "name": "interact"
+        },
+        {
+            "name": "move"
+        },
+        {
+            "name": "stop"
+        },
+        {
+            "name": "wait_delay"
+        }
+    ],
+    "automata": [
+        {
+            "edges": [
+                {
+                    "action": "check_water",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "wants_water11 <- 1",
+                                    "ref": "wants_water11",
+                                    "value": 1
+                                },
+                                {
+                                    "comment": "time <- 10",
+                                    "ref": "time",
+                                    "value": 10
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(2 / 10)",
+                                "exp": {
+                                    "left": 2,
+                                    "op": "/",
+                                    "right": 10
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "wants_water11 <- 2",
+                                    "ref": "wants_water11",
+                                    "value": 2
+                                },
+                                {
+                                    "comment": "time <- 10",
+                                    "ref": "time",
+                                    "value": 10
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - (2 / 10))",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "-",
+                                    "right": {
+                                        "left": 2,
+                                        "op": "/",
+                                        "right": 10
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 11) & (wants_water11 = 0))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 11
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "wants_water11",
+                                "op": "=",
+                                "right": 0
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "check_water",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "wants_water6 <- 1",
+                                    "ref": "wants_water6",
+                                    "value": 1
+                                },
+                                {
+                                    "comment": "time <- 10",
+                                    "ref": "time",
+                                    "value": 10
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(2 / 10)",
+                                "exp": {
+                                    "left": 2,
+                                    "op": "/",
+                                    "right": 10
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "wants_water6 <- 2",
+                                    "ref": "wants_water6",
+                                    "value": 2
+                                },
+                                {
+                                    "comment": "time <- 10",
+                                    "ref": "time",
+                                    "value": 10
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - (2 / 10))",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "-",
+                                    "right": {
+                                        "left": 2,
+                                        "op": "/",
+                                        "right": 10
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 6) & (wants_water6 = 0))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 6
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "wants_water6",
+                                "op": "=",
+                                "right": 0
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "check_water",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "wants_water7 <- 1",
+                                    "ref": "wants_water7",
+                                    "value": 1
+                                },
+                                {
+                                    "comment": "time <- 10",
+                                    "ref": "time",
+                                    "value": 10
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(2 / 10)",
+                                "exp": {
+                                    "left": 2,
+                                    "op": "/",
+                                    "right": 10
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "wants_water7 <- 2",
+                                    "ref": "wants_water7",
+                                    "value": 2
+                                },
+                                {
+                                    "comment": "time <- 10",
+                                    "ref": "time",
+                                    "value": 10
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - (2 / 10))",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "-",
+                                    "right": {
+                                        "left": 2,
+                                        "op": "/",
+                                        "right": 10
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 7) & (wants_water7 = 0))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 7
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "wants_water7",
+                                "op": "=",
+                                "right": 0
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "deliver_water",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "delivered_water11 <- true",
+                                    "ref": "delivered_water11",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "n_water <- (n_water - 1)",
+                                    "ref": "n_water",
+                                    "value": {
+                                        "left": "n_water",
+                                        "op": "-",
+                                        "right": 1
+                                    }
+                                },
+                                {
+                                    "comment": "time <- 8",
+                                    "ref": "time",
+                                    "value": 8
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((((l = 11) & (wants_water11 = 1)) & !(delivered_water11)) & (n_water > 0))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "n_water",
+                                    "op": ">",
+                                    "right": 0
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "wants_water11",
+                                    "op": "=",
+                                    "right": 1
+                                }
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": {
+                                    "exp": "delivered_water11",
+                                    "op": "¬"
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "l",
+                                    "op": "=",
+                                    "right": 11
+                                }
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "deliver_water",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "delivered_water7 <- true",
+                                    "ref": "delivered_water7",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "n_water <- (n_water - 1)",
+                                    "ref": "n_water",
+                                    "value": {
+                                        "left": "n_water",
+                                        "op": "-",
+                                        "right": 1
+                                    }
+                                },
+                                {
+                                    "comment": "time <- 8",
+                                    "ref": "time",
+                                    "value": 8
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((((l = 7) & (wants_water7 = 1)) & !(delivered_water7)) & (n_water > 0))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "n_water",
+                                    "op": ">",
+                                    "right": 0
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "wants_water7",
+                                    "op": "=",
+                                    "right": 1
+                                }
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": {
+                                    "exp": "delivered_water7",
+                                    "op": "¬"
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "l",
+                                    "op": "=",
+                                    "right": 7
+                                }
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "deliver_water",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "delivered_water6 <- true",
+                                    "ref": "delivered_water6",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "n_water <- (n_water - 1)",
+                                    "ref": "n_water",
+                                    "value": {
+                                        "left": "n_water",
+                                        "op": "-",
+                                        "right": 1
+                                    }
+                                },
+                                {
+                                    "comment": "time <- 8",
+                                    "ref": "time",
+                                    "value": 8
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((((l = 6) & (wants_water6 = 1)) & !(delivered_water6)) & (n_water > 0))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "n_water",
+                                    "op": ">",
+                                    "right": 0
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "wants_water6",
+                                    "op": "=",
+                                    "right": 1
+                                }
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": {
+                                    "exp": "delivered_water6",
+                                    "op": "¬"
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "l",
+                                    "op": "=",
+                                    "right": 6
+                                }
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "get_water",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "n_water <- (n_water + 1)",
+                                    "ref": "n_water",
+                                    "value": {
+                                        "left": "n_water",
+                                        "op": "+",
+                                        "right": 1
+                                    }
+                                },
+                                {
+                                    "comment": "time <- 6",
+                                    "ref": "time",
+                                    "value": 6
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 3)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 3
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "time <- 6",
+                                    "ref": "time",
+                                    "value": 6
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - (1 / 3))",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "-",
+                                    "right": {
+                                        "left": 1,
+                                        "op": "/",
+                                        "right": 3
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((((l = 1) & (n_water < 2)) & !(delay)) & (n_water < num_undelivered_water))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "n_water",
+                                    "op": "<",
+                                    "right": {
+                                        "args": [],
+                                        "function": "num_undelivered_water",
+                                        "op": "call"
+                                    }
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "n_water",
+                                    "op": "<",
+                                    "right": 2
+                                }
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": {
+                                    "exp": "delay",
+                                    "op": "¬"
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "l",
+                                    "op": "=",
+                                    "right": 1
+                                }
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "interact",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "interacted18 <- true",
+                                    "ref": "interacted18",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "time <- 15",
+                                    "ref": "time",
+                                    "value": 15
+                                },
+                                {
+                                    "comment": "interaction <- 1",
+                                    "ref": "interaction",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 18) & !(interacted18))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 18
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "interacted18",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "interact",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "interacted17 <- true",
+                                    "ref": "interacted17",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "time <- 15",
+                                    "ref": "time",
+                                    "value": 15
+                                },
+                                {
+                                    "comment": "interaction <- 1",
+                                    "ref": "interaction",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 17) & !(interacted17))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 17
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "interacted17",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "interact",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "interacted6 <- true",
+                                    "ref": "interacted6",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "time <- 15",
+                                    "ref": "time",
+                                    "value": 15
+                                },
+                                {
+                                    "comment": "interaction <- 1",
+                                    "ref": "interaction",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 6) & !(interacted6))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 6
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "interacted6",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "interact",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "interacted10 <- true",
+                                    "ref": "interacted10",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "time <- 15",
+                                    "ref": "time",
+                                    "value": 15
+                                },
+                                {
+                                    "comment": "interaction <- 1",
+                                    "ref": "interaction",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 10) & !(interacted10))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 10
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "interacted10",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 18",
+                                    "ref": "l",
+                                    "value": 18
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 13) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 13
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 13",
+                                    "ref": "l",
+                                    "value": 13
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 12) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 12
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 5",
+                                    "ref": "l",
+                                    "value": 5
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 4) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 4
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 8",
+                                    "ref": "l",
+                                    "value": 8
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 4) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 4
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 9",
+                                    "ref": "l",
+                                    "value": 9
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 4) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 4
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 4",
+                                    "ref": "l",
+                                    "value": 4
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 5) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 5
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 10",
+                                    "ref": "l",
+                                    "value": 10
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 5) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 5
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 11",
+                                    "ref": "l",
+                                    "value": 11
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 5) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 5
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 3",
+                                    "ref": "l",
+                                    "value": 3
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 6) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 6
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 3",
+                                    "ref": "l",
+                                    "value": 3
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 7) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 7
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 4",
+                                    "ref": "l",
+                                    "value": 4
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 8) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 8
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 5",
+                                    "ref": "l",
+                                    "value": 5
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 10) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 10
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 0",
+                                    "ref": "l",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 12) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 12
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 12",
+                                    "ref": "l",
+                                    "value": 12
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - (2 / 10))",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "-",
+                                    "right": {
+                                        "left": 2,
+                                        "op": "/",
+                                        "right": 10
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "delay <- true",
+                                    "ref": "delay",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "l <- 12",
+                                    "ref": "l",
+                                    "value": 12
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(2 / 10)",
+                                "exp": {
+                                    "left": 2,
+                                    "op": "/",
+                                    "right": 10
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 0) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 0
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 1",
+                                    "ref": "l",
+                                    "value": 1
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - (2 / 10))",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "-",
+                                    "right": {
+                                        "left": 2,
+                                        "op": "/",
+                                        "right": 10
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "delay <- true",
+                                    "ref": "delay",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "l <- 1",
+                                    "ref": "l",
+                                    "value": 1
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(2 / 10)",
+                                "exp": {
+                                    "left": 2,
+                                    "op": "/",
+                                    "right": 10
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 0) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 0
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 4",
+                                    "ref": "l",
+                                    "value": 4
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 3) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 3
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 12",
+                                    "ref": "l",
+                                    "value": 12
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 13) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 13
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 14",
+                                    "ref": "l",
+                                    "value": 14
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 13) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 13
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 0",
+                                    "ref": "l",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 3) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 3
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 17",
+                                    "ref": "l",
+                                    "value": 17
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 13) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 13
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 13",
+                                    "ref": "l",
+                                    "value": 13
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 14) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 14
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 19",
+                                    "ref": "l",
+                                    "value": 19
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 14) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 14
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 20",
+                                    "ref": "l",
+                                    "value": 20
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 14) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 14
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 12",
+                                    "ref": "l",
+                                    "value": 12
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 15) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 15
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 12",
+                                    "ref": "l",
+                                    "value": 12
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 16) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 16
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 13",
+                                    "ref": "l",
+                                    "value": 13
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 17) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 17
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 13",
+                                    "ref": "l",
+                                    "value": 13
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 18) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 18
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 14",
+                                    "ref": "l",
+                                    "value": 14
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 19) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 19
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 14",
+                                    "ref": "l",
+                                    "value": 14
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 20) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 20
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 3",
+                                    "ref": "l",
+                                    "value": 3
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - (2 / 10))",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "-",
+                                    "right": {
+                                        "left": 2,
+                                        "op": "/",
+                                        "right": 10
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "delay <- true",
+                                    "ref": "delay",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "l <- 3",
+                                    "ref": "l",
+                                    "value": 3
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(2 / 10)",
+                                "exp": {
+                                    "left": 2,
+                                    "op": "/",
+                                    "right": 10
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 0) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 0
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 2",
+                                    "ref": "l",
+                                    "value": 2
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - (2 / 10))",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "-",
+                                    "right": {
+                                        "left": 2,
+                                        "op": "/",
+                                        "right": 10
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "delay <- true",
+                                    "ref": "delay",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "l <- 2",
+                                    "ref": "l",
+                                    "value": 2
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(2 / 10)",
+                                "exp": {
+                                    "left": 2,
+                                    "op": "/",
+                                    "right": 10
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 0) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 0
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 5",
+                                    "ref": "l",
+                                    "value": 5
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 11) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 11
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 4",
+                                    "ref": "l",
+                                    "value": 4
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 9) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 9
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 0",
+                                    "ref": "l",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 1) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 1
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 0",
+                                    "ref": "l",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 2) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 2
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 15",
+                                    "ref": "l",
+                                    "value": 15
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 12) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 12
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 16",
+                                    "ref": "l",
+                                    "value": 16
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 12) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 12
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 6",
+                                    "ref": "l",
+                                    "value": 6
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 3) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 3
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 7",
+                                    "ref": "l",
+                                    "value": 7
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 3) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 3
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "l <- 3",
+                                    "ref": "l",
+                                    "value": 3
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((l = 4) & !(delay))",
+                        "exp": {
+                            "left": {
+                                "left": "l",
+                                "op": "=",
+                                "right": 4
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delay",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "wait_delay",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "delay <- false",
+                                    "ref": "delay",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "time <- 5",
+                                    "ref": "time",
+                                    "value": 5
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "delay",
+                        "exp": "delay"
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l",
+                    "transient-values": [
+                        {
+                            "comment": "timeExceeded <- (t = 0)",
+                            "ref": "timeExceeded",
+                            "value": {
+                                "left": "t",
+                                "op": "=",
+                                "right": 0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "name": "robot",
+            "variables": [
+                {
+                    "initial-value": 0,
+                    "name": "l",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 20
+                    }
+                },
+                {
+                    "initial-value": false,
+                    "name": "delay",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "edges": [
+                {
+                    "action": "check_water",
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "allow_action",
+                        "exp": {
+                            "args": [],
+                            "function": "allow_action",
+                            "op": "call"
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "deliver_water",
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "allow_action",
+                        "exp": {
+                            "args": [],
+                            "function": "allow_action",
+                            "op": "call"
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "get_water",
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "allow_action",
+                        "exp": {
+                            "args": [],
+                            "function": "allow_action",
+                            "op": "call"
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "interact",
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "allow_action",
+                        "exp": {
+                            "args": [],
+                            "function": "allow_action",
+                            "op": "call"
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "allow_action",
+                        "exp": {
+                            "args": [],
+                            "function": "allow_action",
+                            "op": "call"
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "stop",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "stopped <- true",
+                                    "ref": "stopped",
+                                    "value": true
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "taskdone",
+                        "exp": {
+                            "args": [],
+                            "function": "taskdone",
+                            "op": "call"
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "wait_delay",
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "allow_action",
+                        "exp": {
+                            "args": [],
+                            "function": "allow_action",
+                            "op": "call"
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "stopper",
+            "variables": []
+        },
+        {
+            "edges": [
+                {
+                    "action": "check_water",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "t <- (max(0, (t - 10)))",
+                                    "ref": "t",
+                                    "value": {
+                                        "left": 0,
+                                        "op": "max",
+                                        "right": {
+                                            "left": "t",
+                                            "op": "-",
+                                            "right": 10
+                                        }
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "location": "l"
+                },
+                {
+                    "action": "deliver_water",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "t <- (max(0, (t - 8)))",
+                                    "ref": "t",
+                                    "value": {
+                                        "left": 0,
+                                        "op": "max",
+                                        "right": {
+                                            "left": "t",
+                                            "op": "-",
+                                            "right": 8
+                                        }
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "location": "l"
+                },
+                {
+                    "action": "get_water",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "t <- (max(0, (t - 6)))",
+                                    "ref": "t",
+                                    "value": {
+                                        "left": 0,
+                                        "op": "max",
+                                        "right": {
+                                            "left": "t",
+                                            "op": "-",
+                                            "right": 6
+                                        }
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "location": "l"
+                },
+                {
+                    "action": "interact",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "t <- (max(0, (t - 15)))",
+                                    "ref": "t",
+                                    "value": {
+                                        "left": 0,
+                                        "op": "max",
+                                        "right": {
+                                            "left": "t",
+                                            "op": "-",
+                                            "right": 15
+                                        }
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "location": "l"
+                },
+                {
+                    "action": "move",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "t <- (max(0, (t - 1)))",
+                                    "ref": "t",
+                                    "value": {
+                                        "left": 0,
+                                        "op": "max",
+                                        "right": {
+                                            "left": "t",
+                                            "op": "-",
+                                            "right": 1
+                                        }
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "location": "l"
+                },
+                {
+                    "action": "wait_delay",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "t <- (max(0, (t - 5)))",
+                                    "ref": "t",
+                                    "value": {
+                                        "left": 0,
+                                        "op": "max",
+                                        "right": {
+                                            "left": "t",
+                                            "op": "-",
+                                            "right": 5
+                                        }
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "timer",
+            "variables": []
+        }
+    ],
+    "constants": [
+        {
+            "name": "pWantsWater",
+            "type": "real",
+            "value": {
+                "left": 2,
+                "op": "/",
+                "right": 10
+            }
+        },
+        {
+            "name": "pDelay",
+            "type": "real",
+            "value": {
+                "left": 2,
+                "op": "/",
+                "right": 10
+            }
+        },
+        {
+            "name": "pGetWater",
+            "type": "real",
+            "value": {
+                "left": 1,
+                "op": "/",
+                "right": 3
+            }
+        },
+        {
+            "name": "Unf",
+            "type": "int"
+        },
+        {
+            "name": "B",
+            "type": "int"
+        },
+        {
+            "name": "UnfTime",
+            "type": "int",
+            "value": {
+                "else": 0,
+                "if": {
+                    "left": "Unf",
+                    "op": "≥",
+                    "right": 1
+                },
+                "op": "ite",
+                "then": "B"
+            }
+        }
+    ],
+    "features": [
+        "derived-operators",
+        "functions",
+        "multi-objective-properties"
+    ],
+    "functions": [
+        {
+            "body": {
+                "left": {
+                    "left": {
+                        "else": 0,
+                        "if": {
+                            "left": {
+                                "left": "wants_water6",
+                                "op": "=",
+                                "right": 1
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delivered_water6",
+                                "op": "¬"
+                            }
+                        },
+                        "op": "ite",
+                        "then": 1
+                    },
+                    "op": "+",
+                    "right": {
+                        "else": 0,
+                        "if": {
+                            "left": {
+                                "left": "wants_water7",
+                                "op": "=",
+                                "right": 1
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "delivered_water7",
+                                "op": "¬"
+                            }
+                        },
+                        "op": "ite",
+                        "then": 1
+                    }
+                },
+                "op": "+",
+                "right": {
+                    "else": 0,
+                    "if": {
+                        "left": {
+                            "left": "wants_water11",
+                            "op": "=",
+                            "right": 1
+                        },
+                        "op": "∧",
+                        "right": {
+                            "exp": "delivered_water11",
+                            "op": "¬"
+                        }
+                    },
+                    "op": "ite",
+                    "then": 1
+                }
+            },
+            "name": "num_undelivered_water",
+            "parameters": [],
+            "type": "int"
+        },
+        {
+            "body": {
+                "left": {
+                    "left": {
+                        "left": {
+                            "left": "wants_water11",
+                            "op": ">",
+                            "right": 0
+                        },
+                        "op": "∧",
+                        "right": {
+                            "left": {
+                                "args": [],
+                                "function": "num_undelivered_water",
+                                "op": "call"
+                            },
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "op": "∧",
+                    "right": {
+                        "left": "wants_water6",
+                        "op": ">",
+                        "right": 0
+                    }
+                },
+                "op": "∧",
+                "right": {
+                    "left": {
+                        "left": "wants_water7",
+                        "op": ">",
+                        "right": 0
+                    },
+                    "op": "∧",
+                    "right": {
+                        "left": "n_water",
+                        "op": "=",
+                        "right": 0
+                    }
+                }
+            },
+            "name": "taskdone",
+            "parameters": [],
+            "type": "bool"
+        },
+        {
+            "body": {
+                "left": {
+                    "exp": "stopped",
+                    "op": "¬"
+                },
+                "op": "∧",
+                "right": {
+                    "exp": {
+                        "left": {
+                            "left": {
+                                "left": {
+                                    "args": [],
+                                    "function": "taskdone",
+                                    "op": "call"
+                                },
+                                "op": "∧",
+                                "right": "interacted10"
+                            },
+                            "op": "∧",
+                            "right": "interacted17"
+                        },
+                        "op": "∧",
+                        "right": {
+                            "left": "interacted18",
+                            "op": "∧",
+                            "right": "interacted6"
+                        }
+                    },
+                    "op": "¬"
+                }
+            },
+            "name": "allow_action",
+            "parameters": [],
+            "type": "bool"
+        }
+    ],
+    "jani-version": 1,
+    "name": "care-home",
+    "properties": [
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "op": "Multi",
+                    "properties": [
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "exp": "time",
+                                "op": "Emin"
+                            },
+                            "opt": "min"
+                        },
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "exp": "interaction",
+                                "op": "Emax"
+                            },
+                            "opt": "max"
+                        }
+                    ],
+                    "type": "tradeoff"
+                }
+            },
+            "name": "social"
+        },
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "exp": {
+                        "left": true,
+                        "op": "U",
+                        "reward-bounds": [
+                            {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "bounds": {
+                                    "upper": "B",
+                                    "upper-exclusive": false
+                                },
+                                "exp": "time"
+                            }
+                        ],
+                        "right": {
+                            "left": {
+                                "left": {
+                                    "left": {
+                                        "left": "wants_water11",
+                                        "op": ">",
+                                        "right": 0
+                                    },
+                                    "op": "∧",
+                                    "right": {
+                                        "left": {
+                                            "left": {
+                                                "left": {
+                                                    "else": 0,
+                                                    "if": {
+                                                        "left": {
+                                                            "left": "wants_water6",
+                                                            "op": "=",
+                                                            "right": 1
+                                                        },
+                                                        "op": "∧",
+                                                        "right": {
+                                                            "exp": "delivered_water6",
+                                                            "op": "¬"
+                                                        }
+                                                    },
+                                                    "op": "ite",
+                                                    "then": 1
+                                                },
+                                                "op": "+",
+                                                "right": {
+                                                    "else": 0,
+                                                    "if": {
+                                                        "left": {
+                                                            "left": "wants_water7",
+                                                            "op": "=",
+                                                            "right": 1
+                                                        },
+                                                        "op": "∧",
+                                                        "right": {
+                                                            "exp": "delivered_water7",
+                                                            "op": "¬"
+                                                        }
+                                                    },
+                                                    "op": "ite",
+                                                    "then": 1
+                                                }
+                                            },
+                                            "op": "+",
+                                            "right": {
+                                                "else": 0,
+                                                "if": {
+                                                    "left": {
+                                                        "left": "wants_water11",
+                                                        "op": "=",
+                                                        "right": 1
+                                                    },
+                                                    "op": "∧",
+                                                    "right": {
+                                                        "exp": "delivered_water11",
+                                                        "op": "¬"
+                                                    }
+                                                },
+                                                "op": "ite",
+                                                "then": 1
+                                            }
+                                        },
+                                        "op": "=",
+                                        "right": 0
+                                    }
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "wants_water6",
+                                    "op": ">",
+                                    "right": 0
+                                }
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": {
+                                    "left": "wants_water7",
+                                    "op": ">",
+                                    "right": 0
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "n_water",
+                                    "op": "=",
+                                    "right": 0
+                                }
+                            }
+                        }
+                    },
+                    "op": "Pmax"
+                }
+            },
+            "name": "performant"
+        },
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "op": "Multi",
+                    "properties": [
+                        {
+                            "exp": {
+                                "exp": {
+                                    "left": true,
+                                    "op": "U",
+                                    "reward-bounds": [
+                                        {
+                                            "accumulate": [
+                                                "steps"
+                                            ],
+                                            "bounds": {
+                                                "upper": "B",
+                                                "upper-exclusive": false
+                                            },
+                                            "exp": "time"
+                                        }
+                                    ],
+                                    "right": {
+                                        "left": {
+                                            "left": {
+                                                "left": {
+                                                    "left": "wants_water11",
+                                                    "op": ">",
+                                                    "right": 0
+                                                },
+                                                "op": "∧",
+                                                "right": {
+                                                    "left": {
+                                                        "left": {
+                                                            "left": {
+                                                                "else": 0,
+                                                                "if": {
+                                                                    "left": {
+                                                                        "left": "wants_water6",
+                                                                        "op": "=",
+                                                                        "right": 1
+                                                                    },
+                                                                    "op": "∧",
+                                                                    "right": {
+                                                                        "exp": "delivered_water6",
+                                                                        "op": "¬"
+                                                                    }
+                                                                },
+                                                                "op": "ite",
+                                                                "then": 1
+                                                            },
+                                                            "op": "+",
+                                                            "right": {
+                                                                "else": 0,
+                                                                "if": {
+                                                                    "left": {
+                                                                        "left": "wants_water7",
+                                                                        "op": "=",
+                                                                        "right": 1
+                                                                    },
+                                                                    "op": "∧",
+                                                                    "right": {
+                                                                        "exp": "delivered_water7",
+                                                                        "op": "¬"
+                                                                    }
+                                                                },
+                                                                "op": "ite",
+                                                                "then": 1
+                                                            }
+                                                        },
+                                                        "op": "+",
+                                                        "right": {
+                                                            "else": 0,
+                                                            "if": {
+                                                                "left": {
+                                                                    "left": "wants_water11",
+                                                                    "op": "=",
+                                                                    "right": 1
+                                                                },
+                                                                "op": "∧",
+                                                                "right": {
+                                                                    "exp": "delivered_water11",
+                                                                    "op": "¬"
+                                                                }
+                                                            },
+                                                            "op": "ite",
+                                                            "then": 1
+                                                        }
+                                                    },
+                                                    "op": "=",
+                                                    "right": 0
+                                                }
+                                            },
+                                            "op": "∧",
+                                            "right": {
+                                                "left": "wants_water6",
+                                                "op": ">",
+                                                "right": 0
+                                            }
+                                        },
+                                        "op": "∧",
+                                        "right": {
+                                            "left": {
+                                                "left": "wants_water7",
+                                                "op": ">",
+                                                "right": 0
+                                            },
+                                            "op": "∧",
+                                            "right": {
+                                                "left": "n_water",
+                                                "op": "=",
+                                                "right": 0
+                                            }
+                                        }
+                                    }
+                                },
+                                "op": "Pmax"
+                            },
+                            "opt": "max"
+                        },
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "exp": "interaction",
+                                "op": "Emax",
+                                "reward-instants": [
+                                    {
+                                        "accumulate": [
+                                            "steps"
+                                        ],
+                                        "exp": "time",
+                                        "instant": "B"
+                                    }
+                                ]
+                            },
+                            "opt": "max"
+                        }
+                    ],
+                    "type": "tradeoff"
+                }
+            },
+            "name": "efficient_bounded"
+        },
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "exp": {
+                        "left": true,
+                        "op": "U",
+                        "right": {
+                            "left": {
+                                "exp": "timeExceeded",
+                                "op": "¬"
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": {
+                                    "left": {
+                                        "left": {
+                                            "left": "wants_water11",
+                                            "op": ">",
+                                            "right": 0
+                                        },
+                                        "op": "∧",
+                                        "right": {
+                                            "left": {
+                                                "left": {
+                                                    "left": {
+                                                        "else": 0,
+                                                        "if": {
+                                                            "left": {
+                                                                "left": "wants_water6",
+                                                                "op": "=",
+                                                                "right": 1
+                                                            },
+                                                            "op": "∧",
+                                                            "right": {
+                                                                "exp": "delivered_water6",
+                                                                "op": "¬"
+                                                            }
+                                                        },
+                                                        "op": "ite",
+                                                        "then": 1
+                                                    },
+                                                    "op": "+",
+                                                    "right": {
+                                                        "else": 0,
+                                                        "if": {
+                                                            "left": {
+                                                                "left": "wants_water7",
+                                                                "op": "=",
+                                                                "right": 1
+                                                            },
+                                                            "op": "∧",
+                                                            "right": {
+                                                                "exp": "delivered_water7",
+                                                                "op": "¬"
+                                                            }
+                                                        },
+                                                        "op": "ite",
+                                                        "then": 1
+                                                    }
+                                                },
+                                                "op": "+",
+                                                "right": {
+                                                    "else": 0,
+                                                    "if": {
+                                                        "left": {
+                                                            "left": "wants_water11",
+                                                            "op": "=",
+                                                            "right": 1
+                                                        },
+                                                        "op": "∧",
+                                                        "right": {
+                                                            "exp": "delivered_water11",
+                                                            "op": "¬"
+                                                        }
+                                                    },
+                                                    "op": "ite",
+                                                    "then": 1
+                                                }
+                                            },
+                                            "op": "=",
+                                            "right": 0
+                                        }
+                                    },
+                                    "op": "∧",
+                                    "right": {
+                                        "left": "wants_water6",
+                                        "op": ">",
+                                        "right": 0
+                                    }
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": {
+                                        "left": "wants_water7",
+                                        "op": ">",
+                                        "right": 0
+                                    },
+                                    "op": "∧",
+                                    "right": {
+                                        "left": "n_water",
+                                        "op": "=",
+                                        "right": 0
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "op": "Pmax"
+                }
+            },
+            "name": "effective"
+        },
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "op": "Multi",
+                    "properties": [
+                        {
+                            "exp": {
+                                "exp": {
+                                    "left": true,
+                                    "op": "U",
+                                    "right": {
+                                        "left": {
+                                            "exp": "timeExceeded",
+                                            "op": "¬"
+                                        },
+                                        "op": "∧",
+                                        "right": {
+                                            "left": {
+                                                "left": {
+                                                    "left": {
+                                                        "left": "wants_water11",
+                                                        "op": ">",
+                                                        "right": 0
+                                                    },
+                                                    "op": "∧",
+                                                    "right": {
+                                                        "left": {
+                                                            "left": {
+                                                                "left": {
+                                                                    "else": 0,
+                                                                    "if": {
+                                                                        "left": {
+                                                                            "left": "wants_water6",
+                                                                            "op": "=",
+                                                                            "right": 1
+                                                                        },
+                                                                        "op": "∧",
+                                                                        "right": {
+                                                                            "exp": "delivered_water6",
+                                                                            "op": "¬"
+                                                                        }
+                                                                    },
+                                                                    "op": "ite",
+                                                                    "then": 1
+                                                                },
+                                                                "op": "+",
+                                                                "right": {
+                                                                    "else": 0,
+                                                                    "if": {
+                                                                        "left": {
+                                                                            "left": "wants_water7",
+                                                                            "op": "=",
+                                                                            "right": 1
+                                                                        },
+                                                                        "op": "∧",
+                                                                        "right": {
+                                                                            "exp": "delivered_water7",
+                                                                            "op": "¬"
+                                                                        }
+                                                                    },
+                                                                    "op": "ite",
+                                                                    "then": 1
+                                                                }
+                                                            },
+                                                            "op": "+",
+                                                            "right": {
+                                                                "else": 0,
+                                                                "if": {
+                                                                    "left": {
+                                                                        "left": "wants_water11",
+                                                                        "op": "=",
+                                                                        "right": 1
+                                                                    },
+                                                                    "op": "∧",
+                                                                    "right": {
+                                                                        "exp": "delivered_water11",
+                                                                        "op": "¬"
+                                                                    }
+                                                                },
+                                                                "op": "ite",
+                                                                "then": 1
+                                                            }
+                                                        },
+                                                        "op": "=",
+                                                        "right": 0
+                                                    }
+                                                },
+                                                "op": "∧",
+                                                "right": {
+                                                    "left": "wants_water6",
+                                                    "op": ">",
+                                                    "right": 0
+                                                }
+                                            },
+                                            "op": "∧",
+                                            "right": {
+                                                "left": {
+                                                    "left": "wants_water7",
+                                                    "op": ">",
+                                                    "right": 0
+                                                },
+                                                "op": "∧",
+                                                "right": {
+                                                    "left": "n_water",
+                                                    "op": "=",
+                                                    "right": 0
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "op": "Pmax"
+                            },
+                            "opt": "max"
+                        },
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "exp": "interaction",
+                                "op": "Emax",
+                                "reach": "timeExceeded"
+                            },
+                            "opt": "max"
+                        }
+                    ],
+                    "type": "tradeoff"
+                }
+            },
+            "name": "efficient"
+        }
+    ],
+    "restrict-initial": {
+        "exp": true
+    },
+    "system": {
+        "elements": [
+            {
+                "automaton": "robot"
+            },
+            {
+                "automaton": "stopper"
+            },
+            {
+                "automaton": "timer"
+            }
+        ],
+        "syncs": [
+            {
+                "result": "check_water",
+                "synchronise": [
+                    "check_water",
+                    "check_water",
+                    "check_water"
+                ]
+            },
+            {
+                "result": "deliver_water",
+                "synchronise": [
+                    "deliver_water",
+                    "deliver_water",
+                    "deliver_water"
+                ]
+            },
+            {
+                "result": "get_water",
+                "synchronise": [
+                    "get_water",
+                    "get_water",
+                    "get_water"
+                ]
+            },
+            {
+                "result": "interact",
+                "synchronise": [
+                    "interact",
+                    "interact",
+                    "interact"
+                ]
+            },
+            {
+                "result": "move",
+                "synchronise": [
+                    "move",
+                    "move",
+                    "move"
+                ]
+            },
+            {
+                "result": "stop",
+                "synchronise": [
+                    null,
+                    "stop",
+                    null
+                ]
+            },
+            {
+                "result": "wait_delay",
+                "synchronise": [
+                    "wait_delay",
+                    "wait_delay",
+                    "wait_delay"
+                ]
+            }
+        ]
+    },
+    "type": "mdp",
+    "variables": [
+        {
+            "initial-value": false,
+            "name": "timeExceeded",
+            "transient": true,
+            "type": "bool"
+        },
+        {
+            "initial-value": 0.0,
+            "name": "time",
+            "transient": true,
+            "type": "real"
+        },
+        {
+            "initial-value": 0.0,
+            "name": "interaction",
+            "transient": true,
+            "type": "real"
+        },
+        {
+            "initial-value": 0,
+            "name": "n_water",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": 2
+            }
+        },
+        {
+            "initial-value": 0,
+            "name": "wants_water6",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": 2
+            }
+        },
+        {
+            "initial-value": 0,
+            "name": "wants_water7",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": 2
+            }
+        },
+        {
+            "initial-value": 0,
+            "name": "wants_water11",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": 2
+            }
+        },
+        {
+            "initial-value": false,
+            "name": "delivered_water6",
+            "type": "bool"
+        },
+        {
+            "initial-value": false,
+            "name": "delivered_water7",
+            "type": "bool"
+        },
+        {
+            "initial-value": false,
+            "name": "delivered_water11",
+            "type": "bool"
+        },
+        {
+            "initial-value": false,
+            "name": "interacted6",
+            "type": "bool"
+        },
+        {
+            "initial-value": false,
+            "name": "interacted10",
+            "type": "bool"
+        },
+        {
+            "initial-value": false,
+            "name": "interacted17",
+            "type": "bool"
+        },
+        {
+            "initial-value": false,
+            "name": "interacted18",
+            "type": "bool"
+        },
+        {
+            "initial-value": false,
+            "name": "stopped",
+            "type": "bool"
+        },
+        {
+            "initial-value": {
+                "else": 0,
+                "if": {
+                    "left": "Unf",
+                    "op": "≥",
+                    "right": 1
+                },
+                "op": "ite",
+                "then": "B"
+            },
+            "name": "t",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": {
+                    "left": {
+                        "else": 0,
+                        "if": {
+                            "left": "Unf",
+                            "op": "≥",
+                            "right": 1
+                        },
+                        "op": "ite",
+                        "then": "B"
+                    },
+                    "op": "+",
+                    "right": 1
+                }
+            }
+        }
+    ]
+}

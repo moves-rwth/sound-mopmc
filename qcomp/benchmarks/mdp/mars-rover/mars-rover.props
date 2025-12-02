@@ -1,0 +1,7 @@
+"lazy": multi(R{"time"}min=? [C], R{"energy"}min=? [C]);
+
+"max_value_bounded": Pmax=? [F{"value"}>=BndVal,{"time"}<=BndTime,{"energy"}<=BndEn true];
+"bounded_tradeoff": multi(Pmax=? [F{"value"}>=BndVal true], Pmax=? [F{"time"}<=BndTime,{"energy"}<=BndEn done]);
+
+"safe_collection": Pmax=? [F "valueCollected" & !"exceedTime" & !"exceedEnergy"];
+"safe_collection_tradeoff": multi(Pmax=? [F "valueCollected"], Pmax=? [F !"exceedTime" & !"exceedEnergy" & done]);

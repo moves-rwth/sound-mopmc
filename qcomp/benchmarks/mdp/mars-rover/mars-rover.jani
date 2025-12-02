@@ -1,0 +1,2272 @@
+{
+    "actions": [
+        {
+            "name": "rover_done"
+        },
+        {
+            "name": "task1_start"
+        },
+        {
+            "name": "task2_start"
+        },
+        {
+            "name": "task3_start"
+        },
+        {
+            "name": "task4_start"
+        },
+        {
+            "name": "task_done"
+        }
+    ],
+    "automata": [
+        {
+            "edges": [
+                {
+                    "action": "rover_done",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "done <- true",
+                                    "ref": "done",
+                                    "value": true
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((Unf != 1) & (task = 0))",
+                        "exp": {
+                            "left": {
+                                "left": "Unf",
+                                "op": "≠",
+                                "right": 1
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "task",
+                                "op": "=",
+                                "right": 0
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "task1_start",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "success <- true",
+                                    "ref": "success",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "task <- 1",
+                                    "ref": "task",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "success <- false",
+                                    "ref": "success",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "task <- 1",
+                                    "ref": "task",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((task = 0) & !(done))",
+                        "exp": {
+                            "left": {
+                                "left": "task",
+                                "op": "=",
+                                "right": 0
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "done",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "task2_start",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "success <- true",
+                                    "ref": "success",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "task <- 2",
+                                    "ref": "task",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "3/5",
+                                "exp": 0.6
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "success <- false",
+                                    "ref": "success",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "task <- 2",
+                                    "ref": "task",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 3/5)",
+                                "exp": {
+                                    "left": 2.0,
+                                    "op": "/",
+                                    "right": 5.0
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((task = 0) & !(done))",
+                        "exp": {
+                            "left": {
+                                "left": "task",
+                                "op": "=",
+                                "right": 0
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "done",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "task3_start",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "success <- true",
+                                    "ref": "success",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "task <- 3",
+                                    "ref": "task",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "4/5",
+                                "exp": {
+                                    "left": 4.0,
+                                    "op": "/",
+                                    "right": 5.0
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "success <- false",
+                                    "ref": "success",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "task <- 3",
+                                    "ref": "task",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 4/5)",
+                                "exp": {
+                                    "left": 1.0,
+                                    "op": "/",
+                                    "right": 5.0
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((task = 0) & !(done))",
+                        "exp": {
+                            "left": {
+                                "left": "task",
+                                "op": "=",
+                                "right": 0
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "done",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "task4_start",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "success <- true",
+                                    "ref": "success",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "task <- 4",
+                                    "ref": "task",
+                                    "value": 4
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/5",
+                                "exp": {
+                                    "left": 1.0,
+                                    "op": "/",
+                                    "right": 5.0
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "success <- false",
+                                    "ref": "success",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "task <- 4",
+                                    "ref": "task",
+                                    "value": 4
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/5)",
+                                "exp": {
+                                    "left": 4.0,
+                                    "op": "/",
+                                    "right": 5.0
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((task = 0) & !(done))",
+                        "exp": {
+                            "left": {
+                                "left": "task",
+                                "op": "=",
+                                "right": 0
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "done",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "task_done",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "success <- false",
+                                    "ref": "success",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "task <- 0",
+                                    "ref": "task",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "value <- ((((low_value_task & success) ? 2 : 0) + ((medium_value_task & success) ? 10 : 0)) + ((high_value_task & success) ? 30 : 0))",
+                                    "ref": "value",
+                                    "value": {
+                                        "left": {
+                                            "left": {
+                                                "else": 0.0,
+                                                "if": {
+                                                    "left": {
+                                                        "args": [],
+                                                        "function": "low_value_task",
+                                                        "op": "call"
+                                                    },
+                                                    "op": "∧",
+                                                    "right": "success"
+                                                },
+                                                "op": "ite",
+                                                "then": 2
+                                            },
+                                            "op": "+",
+                                            "right": {
+                                                "else": 0.0,
+                                                "if": {
+                                                    "left": {
+                                                        "args": [],
+                                                        "function": "medium_value_task",
+                                                        "op": "call"
+                                                    },
+                                                    "op": "∧",
+                                                    "right": "success"
+                                                },
+                                                "op": "ite",
+                                                "then": 10
+                                            }
+                                        },
+                                        "op": "+",
+                                        "right": {
+                                            "else": 0.0,
+                                            "if": {
+                                                "left": {
+                                                    "args": [],
+                                                    "function": "high_value_task",
+                                                    "op": "call"
+                                                },
+                                                "op": "∧",
+                                                "right": "success"
+                                            },
+                                            "op": "ite",
+                                            "then": 30
+                                        }
+                                    }
+                                },
+                                {
+                                    "comment": "time <- (((low_time_task ? 5 : 0) + (medium_time_task ? 8 : 0)) + (high_time_task ? 10 : 0))",
+                                    "ref": "time",
+                                    "value": {
+                                        "left": {
+                                            "left": {
+                                                "else": 0.0,
+                                                "if": {
+                                                    "args": [],
+                                                    "function": "low_time_task",
+                                                    "op": "call"
+                                                },
+                                                "op": "ite",
+                                                "then": 5
+                                            },
+                                            "op": "+",
+                                            "right": {
+                                                "else": 0.0,
+                                                "if": {
+                                                    "args": [],
+                                                    "function": "medium_time_task",
+                                                    "op": "call"
+                                                },
+                                                "op": "ite",
+                                                "then": 8
+                                            }
+                                        },
+                                        "op": "+",
+                                        "right": {
+                                            "else": 0.0,
+                                            "if": {
+                                                "args": [],
+                                                "function": "high_time_task",
+                                                "op": "call"
+                                            },
+                                            "op": "ite",
+                                            "then": 10
+                                        }
+                                    }
+                                },
+                                {
+                                    "comment": "energy <- (((((((low_energy_task & !(increased_energy)) ? 3 : 0) + ((low_energy_task & increased_energy) ? 5 : 0)) + ((medium_energy_task & !(increased_energy)) ? 5 : 0)) + ((medium_energy_task & increased_energy) ? 7 : 0)) + ((high_energy_task & !(increased_energy)) ? 7 : 0)) + ((high_energy_task & increased_energy) ? 7 : 0))",
+                                    "ref": "energy",
+                                    "value": {
+                                        "left": {
+                                            "left": {
+                                                "left": {
+                                                    "else": 0.0,
+                                                    "if": {
+                                                        "left": {
+                                                            "args": [],
+                                                            "function": "high_energy_task",
+                                                            "op": "call"
+                                                        },
+                                                        "op": "∧",
+                                                        "right": "increased_energy"
+                                                    },
+                                                    "op": "ite",
+                                                    "then": 7
+                                                },
+                                                "op": "+",
+                                                "right": {
+                                                    "else": 0.0,
+                                                    "if": {
+                                                        "left": {
+                                                            "args": [],
+                                                            "function": "low_energy_task",
+                                                            "op": "call"
+                                                        },
+                                                        "op": "∧",
+                                                        "right": "increased_energy"
+                                                    },
+                                                    "op": "ite",
+                                                    "then": 5
+                                                }
+                                            },
+                                            "op": "+",
+                                            "right": {
+                                                "left": {
+                                                    "else": 0.0,
+                                                    "if": {
+                                                        "left": {
+                                                            "args": [],
+                                                            "function": "medium_energy_task",
+                                                            "op": "call"
+                                                        },
+                                                        "op": "∧",
+                                                        "right": "increased_energy"
+                                                    },
+                                                    "op": "ite",
+                                                    "then": 7
+                                                },
+                                                "op": "+",
+                                                "right": {
+                                                    "else": 0.0,
+                                                    "if": {
+                                                        "left": {
+                                                            "args": [],
+                                                            "function": "medium_energy_task",
+                                                            "op": "call"
+                                                        },
+                                                        "op": "∧",
+                                                        "right": {
+                                                            "exp": "increased_energy",
+                                                            "op": "¬"
+                                                        }
+                                                    },
+                                                    "op": "ite",
+                                                    "then": 5
+                                                }
+                                            }
+                                        },
+                                        "op": "+",
+                                        "right": {
+                                            "left": {
+                                                "else": 0.0,
+                                                "if": {
+                                                    "left": {
+                                                        "args": [],
+                                                        "function": "high_energy_task",
+                                                        "op": "call"
+                                                    },
+                                                    "op": "∧",
+                                                    "right": {
+                                                        "exp": "increased_energy",
+                                                        "op": "¬"
+                                                    }
+                                                },
+                                                "op": "ite",
+                                                "then": 7
+                                            },
+                                            "op": "+",
+                                            "right": {
+                                                "else": 0.0,
+                                                "if": {
+                                                    "left": {
+                                                        "args": [],
+                                                        "function": "low_energy_task",
+                                                        "op": "call"
+                                                    },
+                                                    "op": "∧",
+                                                    "right": {
+                                                        "exp": "increased_energy",
+                                                        "op": "¬"
+                                                    }
+                                                },
+                                                "op": "ite",
+                                                "then": 3
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((task > 0) & !(done))",
+                        "exp": {
+                            "left": {
+                                "left": "task",
+                                "op": ">",
+                                "right": 0
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "done",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l",
+                    "transient-values": [
+                        {
+                            "comment": "valueCollected <- (counter_value = 0)",
+                            "ref": "valueCollected",
+                            "value": {
+                                "left": "counter_value",
+                                "op": "=",
+                                "right": 0
+                            }
+                        },
+                        {
+                            "comment": "exceedTime <- (counter_time = 0)",
+                            "ref": "exceedTime",
+                            "value": {
+                                "left": "counter_time",
+                                "op": "=",
+                                "right": 0
+                            }
+                        },
+                        {
+                            "comment": "exceedEnergy <- (counter_energy = 0)",
+                            "ref": "exceedEnergy",
+                            "value": {
+                                "left": "counter_energy",
+                                "op": "=",
+                                "right": 0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "name": "rover",
+            "variables": []
+        },
+        {
+            "edges": [
+                {
+                    "action": "task1_start",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "increased_energy <- false",
+                                    "ref": "increased_energy",
+                                    "value": false
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "increased_energy <- true",
+                                    "ref": "increased_energy",
+                                    "value": true
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "location": "l"
+                },
+                {
+                    "action": "task2_start",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "increased_energy <- false",
+                                    "ref": "increased_energy",
+                                    "value": false
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "increased_energy <- true",
+                                    "ref": "increased_energy",
+                                    "value": true
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "location": "l"
+                },
+                {
+                    "action": "task3_start",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "increased_energy <- false",
+                                    "ref": "increased_energy",
+                                    "value": false
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "increased_energy <- true",
+                                    "ref": "increased_energy",
+                                    "value": true
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "location": "l"
+                },
+                {
+                    "action": "task4_start",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "increased_energy <- false",
+                                    "ref": "increased_energy",
+                                    "value": false
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "location": "l"
+                },
+                {
+                    "action": "task_done",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "increased_energy <- false",
+                                    "ref": "increased_energy",
+                                    "value": false
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "battery",
+            "variables": []
+        },
+        {
+            "edges": [
+                {
+                    "action": "task_done",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "counter_value <- (max(0, (counter_value - (success ? 2 : 0))))",
+                                    "ref": "counter_value",
+                                    "value": {
+                                        "left": 0,
+                                        "op": "max",
+                                        "right": {
+                                            "left": "counter_value",
+                                            "op": "-",
+                                            "right": {
+                                                "else": 0,
+                                                "if": "success",
+                                                "op": "ite",
+                                                "then": 2
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "low_value_task",
+                        "exp": {
+                            "args": [],
+                            "function": "low_value_task",
+                            "op": "call"
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "task_done",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "counter_value <- (max(0, (counter_value - (success ? 10 : 0))))",
+                                    "ref": "counter_value",
+                                    "value": {
+                                        "left": 0,
+                                        "op": "max",
+                                        "right": {
+                                            "left": "counter_value",
+                                            "op": "-",
+                                            "right": {
+                                                "else": 0,
+                                                "if": "success",
+                                                "op": "ite",
+                                                "then": 10
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "medium_value_task",
+                        "exp": {
+                            "args": [],
+                            "function": "medium_value_task",
+                            "op": "call"
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "task_done",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "counter_value <- (max(0, (counter_value - (success ? 30 : 0))))",
+                                    "ref": "counter_value",
+                                    "value": {
+                                        "left": 0,
+                                        "op": "max",
+                                        "right": {
+                                            "left": "counter_value",
+                                            "op": "-",
+                                            "right": {
+                                                "else": 0,
+                                                "if": "success",
+                                                "op": "ite",
+                                                "then": 30
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "high_value_task",
+                        "exp": {
+                            "args": [],
+                            "function": "high_value_task",
+                            "op": "call"
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "value_counting_module",
+            "variables": []
+        },
+        {
+            "edges": [
+                {
+                    "action": "task_done",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "counter_time <- (max(0, (counter_time - 5)))",
+                                    "ref": "counter_time",
+                                    "value": {
+                                        "left": 0,
+                                        "op": "max",
+                                        "right": {
+                                            "left": "counter_time",
+                                            "op": "-",
+                                            "right": 5
+                                        }
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "low_time_task",
+                        "exp": {
+                            "args": [],
+                            "function": "low_time_task",
+                            "op": "call"
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "task_done",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "counter_time <- (max(0, (counter_time - 8)))",
+                                    "ref": "counter_time",
+                                    "value": {
+                                        "left": 0,
+                                        "op": "max",
+                                        "right": {
+                                            "left": "counter_time",
+                                            "op": "-",
+                                            "right": 8
+                                        }
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "medium_time_task",
+                        "exp": {
+                            "args": [],
+                            "function": "medium_time_task",
+                            "op": "call"
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "task_done",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "counter_time <- (max(0, (counter_time - 10)))",
+                                    "ref": "counter_time",
+                                    "value": {
+                                        "left": 0,
+                                        "op": "max",
+                                        "right": {
+                                            "left": "counter_time",
+                                            "op": "-",
+                                            "right": 10
+                                        }
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "high_time_task",
+                        "exp": {
+                            "args": [],
+                            "function": "high_time_task",
+                            "op": "call"
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "time_counting_module",
+            "variables": []
+        },
+        {
+            "edges": [
+                {
+                    "action": "task_done",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "counter_energy <- (max(0, (counter_energy - 3)))",
+                                    "ref": "counter_energy",
+                                    "value": {
+                                        "left": 0,
+                                        "op": "max",
+                                        "right": {
+                                            "left": "counter_energy",
+                                            "op": "-",
+                                            "right": 3
+                                        }
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(low_energy_task & !(increased_energy))",
+                        "exp": {
+                            "left": {
+                                "args": [],
+                                "function": "low_energy_task",
+                                "op": "call"
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "increased_energy",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "task_done",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "counter_energy <- (max(0, (counter_energy - 5)))",
+                                    "ref": "counter_energy",
+                                    "value": {
+                                        "left": 0,
+                                        "op": "max",
+                                        "right": {
+                                            "left": "counter_energy",
+                                            "op": "-",
+                                            "right": 5
+                                        }
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(low_energy_task & increased_energy)",
+                        "exp": {
+                            "left": {
+                                "args": [],
+                                "function": "low_energy_task",
+                                "op": "call"
+                            },
+                            "op": "∧",
+                            "right": "increased_energy"
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "task_done",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "counter_energy <- (max(0, (counter_energy - 5)))",
+                                    "ref": "counter_energy",
+                                    "value": {
+                                        "left": 0,
+                                        "op": "max",
+                                        "right": {
+                                            "left": "counter_energy",
+                                            "op": "-",
+                                            "right": 5
+                                        }
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(medium_energy_task & !(increased_energy))",
+                        "exp": {
+                            "left": {
+                                "args": [],
+                                "function": "medium_energy_task",
+                                "op": "call"
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "increased_energy",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "task_done",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "counter_energy <- (max(0, (counter_energy - 7)))",
+                                    "ref": "counter_energy",
+                                    "value": {
+                                        "left": 0,
+                                        "op": "max",
+                                        "right": {
+                                            "left": "counter_energy",
+                                            "op": "-",
+                                            "right": 7
+                                        }
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(medium_energy_task & increased_energy)",
+                        "exp": {
+                            "left": {
+                                "args": [],
+                                "function": "medium_energy_task",
+                                "op": "call"
+                            },
+                            "op": "∧",
+                            "right": "increased_energy"
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "task_done",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "counter_energy <- (max(0, (counter_energy - 7)))",
+                                    "ref": "counter_energy",
+                                    "value": {
+                                        "left": 0,
+                                        "op": "max",
+                                        "right": {
+                                            "left": "counter_energy",
+                                            "op": "-",
+                                            "right": 7
+                                        }
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(high_energy_task & !(increased_energy))",
+                        "exp": {
+                            "left": {
+                                "args": [],
+                                "function": "high_energy_task",
+                                "op": "call"
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "increased_energy",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "task_done",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "counter_energy <- (max(0, (counter_energy - 7)))",
+                                    "ref": "counter_energy",
+                                    "value": {
+                                        "left": 0,
+                                        "op": "max",
+                                        "right": {
+                                            "left": "counter_energy",
+                                            "op": "-",
+                                            "right": 7
+                                        }
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(high_energy_task & increased_energy)",
+                        "exp": {
+                            "left": {
+                                "args": [],
+                                "function": "high_energy_task",
+                                "op": "call"
+                            },
+                            "op": "∧",
+                            "right": "increased_energy"
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "energy_counting_module",
+            "variables": []
+        },
+        {
+            "edges": [
+                {
+                    "action": "task1_start",
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((Unf = 0) | !((((counter_value = 0) & (counter_time = 0)) & (counter_energy = 0))))",
+                        "exp": {
+                            "left": {
+                                "left": "Unf",
+                                "op": "=",
+                                "right": 0
+                            },
+                            "op": "∨",
+                            "right": {
+                                "exp": {
+                                    "left": {
+                                        "left": {
+                                            "left": "counter_value",
+                                            "op": "=",
+                                            "right": 0
+                                        },
+                                        "op": "∧",
+                                        "right": {
+                                            "left": "counter_time",
+                                            "op": "=",
+                                            "right": 0
+                                        }
+                                    },
+                                    "op": "∧",
+                                    "right": {
+                                        "left": "counter_energy",
+                                        "op": "=",
+                                        "right": 0
+                                    }
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "task2_start",
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((Unf = 0) | !((((counter_value = 0) & (counter_time = 0)) & (counter_energy = 0))))",
+                        "exp": {
+                            "left": {
+                                "left": "Unf",
+                                "op": "=",
+                                "right": 0
+                            },
+                            "op": "∨",
+                            "right": {
+                                "exp": {
+                                    "left": {
+                                        "left": {
+                                            "left": "counter_value",
+                                            "op": "=",
+                                            "right": 0
+                                        },
+                                        "op": "∧",
+                                        "right": {
+                                            "left": "counter_time",
+                                            "op": "=",
+                                            "right": 0
+                                        }
+                                    },
+                                    "op": "∧",
+                                    "right": {
+                                        "left": "counter_energy",
+                                        "op": "=",
+                                        "right": 0
+                                    }
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "task3_start",
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((Unf = 0) | !((((counter_value = 0) & (counter_time = 0)) & (counter_energy = 0))))",
+                        "exp": {
+                            "left": {
+                                "left": "Unf",
+                                "op": "=",
+                                "right": 0
+                            },
+                            "op": "∨",
+                            "right": {
+                                "exp": {
+                                    "left": {
+                                        "left": {
+                                            "left": "counter_value",
+                                            "op": "=",
+                                            "right": 0
+                                        },
+                                        "op": "∧",
+                                        "right": {
+                                            "left": "counter_time",
+                                            "op": "=",
+                                            "right": 0
+                                        }
+                                    },
+                                    "op": "∧",
+                                    "right": {
+                                        "left": "counter_energy",
+                                        "op": "=",
+                                        "right": 0
+                                    }
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "task4_start",
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((Unf = 0) | !((((counter_value = 0) & (counter_time = 0)) & (counter_energy = 0))))",
+                        "exp": {
+                            "left": {
+                                "left": "Unf",
+                                "op": "=",
+                                "right": 0
+                            },
+                            "op": "∨",
+                            "right": {
+                                "exp": {
+                                    "left": {
+                                        "left": {
+                                            "left": "counter_value",
+                                            "op": "=",
+                                            "right": 0
+                                        },
+                                        "op": "∧",
+                                        "right": {
+                                            "left": "counter_time",
+                                            "op": "=",
+                                            "right": 0
+                                        }
+                                    },
+                                    "op": "∧",
+                                    "right": {
+                                        "left": "counter_energy",
+                                        "op": "=",
+                                        "right": 0
+                                    }
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "unfold",
+            "variables": []
+        }
+    ],
+    "constants": [
+        {
+            "name": "num_tasks",
+            "type": "int",
+            "value": 4
+        },
+        {
+            "name": "time_low",
+            "type": "int",
+            "value": 5
+        },
+        {
+            "name": "time_medium",
+            "type": "int",
+            "value": 8
+        },
+        {
+            "name": "time_high",
+            "type": "int",
+            "value": 10
+        },
+        {
+            "name": "energy_low",
+            "type": "int",
+            "value": 3
+        },
+        {
+            "name": "energy_medium",
+            "type": "int",
+            "value": 5
+        },
+        {
+            "name": "energy_high",
+            "type": "int",
+            "value": 7
+        },
+        {
+            "name": "value_low",
+            "type": "int",
+            "value": 2
+        },
+        {
+            "name": "value_medium",
+            "type": "int",
+            "value": 10
+        },
+        {
+            "name": "value_high",
+            "type": "int",
+            "value": 30
+        },
+        {
+            "name": "task1_success_pr",
+            "type": "real",
+            "value": 0.5
+        },
+        {
+            "name": "task2_success_pr",
+            "type": "real",
+            "value": 0.6
+        },
+        {
+            "name": "task3_success_pr",
+            "type": "real",
+            "value": {
+                "left": 4.0,
+                "op": "/",
+                "right": 5.0
+            }
+        },
+        {
+            "name": "task4_success_pr",
+            "type": "real",
+            "value": {
+                "left": 1.0,
+                "op": "/",
+                "right": 5.0
+            }
+        },
+        {
+            "name": "Unf",
+            "type": "int"
+        },
+        {
+            "name": "B",
+            "type": "int"
+        },
+        {
+            "name": "BndVal",
+            "type": "int",
+            "value": {
+                "left": "B",
+                "op": "*",
+                "right": 5
+            }
+        },
+        {
+            "name": "UnfVal",
+            "type": "int",
+            "value": {
+                "else": 0,
+                "if": {
+                    "left": "Unf",
+                    "op": "≥",
+                    "right": 1
+                },
+                "op": "ite",
+                "then": {
+                    "left": "B",
+                    "op": "*",
+                    "right": 5
+                }
+            }
+        },
+        {
+            "name": "BndTime",
+            "type": "int",
+            "value": {
+                "left": "B",
+                "op": "*",
+                "right": 9
+            }
+        },
+        {
+            "name": "UnfTime",
+            "type": "int",
+            "value": {
+                "else": 0,
+                "if": {
+                    "left": "Unf",
+                    "op": "≥",
+                    "right": 2
+                },
+                "op": "ite",
+                "then": {
+                    "left": {
+                        "left": "B",
+                        "op": "*",
+                        "right": 9
+                    },
+                    "op": "+",
+                    "right": 1
+                }
+            }
+        },
+        {
+            "name": "BndEn",
+            "type": "int",
+            "value": {
+                "left": "B",
+                "op": "*",
+                "right": 5
+            }
+        },
+        {
+            "name": "UnfEn",
+            "type": "int",
+            "value": {
+                "else": 0,
+                "if": {
+                    "left": "Unf",
+                    "op": "≥",
+                    "right": 2
+                },
+                "op": "ite",
+                "then": {
+                    "left": {
+                        "left": "B",
+                        "op": "*",
+                        "right": 5
+                    },
+                    "op": "+",
+                    "right": 1
+                }
+            }
+        }
+    ],
+    "features": [
+        "derived-operators",
+        "functions",
+        "multi-objective-properties"
+    ],
+    "functions": [
+        {
+            "body": {
+                "left": {
+                    "left": "task",
+                    "op": "=",
+                    "right": 2
+                },
+                "op": "∨",
+                "right": {
+                    "left": "task",
+                    "op": "=",
+                    "right": 3
+                }
+            },
+            "name": "low_time_task",
+            "parameters": [],
+            "type": "bool"
+        },
+        {
+            "body": {
+                "left": {
+                    "left": "task",
+                    "op": "=",
+                    "right": 1
+                },
+                "op": "∨",
+                "right": {
+                    "left": "task",
+                    "op": "=",
+                    "right": 4
+                }
+            },
+            "name": "high_time_task",
+            "parameters": [],
+            "type": "bool"
+        },
+        {
+            "body": {
+                "left": "task",
+                "op": "=",
+                "right": 2
+            },
+            "name": "medium_energy_task",
+            "parameters": [],
+            "type": "bool"
+        },
+        {
+            "body": false,
+            "name": "medium_time_task",
+            "parameters": [],
+            "type": "bool"
+        },
+        {
+            "body": {
+                "left": {
+                    "left": "task",
+                    "op": "=",
+                    "right": 1
+                },
+                "op": "∨",
+                "right": {
+                    "left": "task",
+                    "op": "=",
+                    "right": 3
+                }
+            },
+            "name": "low_energy_task",
+            "parameters": [],
+            "type": "bool"
+        },
+        {
+            "body": {
+                "left": "task",
+                "op": "=",
+                "right": 4
+            },
+            "name": "high_energy_task",
+            "parameters": [],
+            "type": "bool"
+        },
+        {
+            "body": {
+                "left": {
+                    "left": "task",
+                    "op": "=",
+                    "right": 1
+                },
+                "op": "∨",
+                "right": {
+                    "left": "task",
+                    "op": "=",
+                    "right": 2
+                }
+            },
+            "name": "medium_value_task",
+            "parameters": [],
+            "type": "bool"
+        },
+        {
+            "body": {
+                "left": "task",
+                "op": "=",
+                "right": 3
+            },
+            "name": "low_value_task",
+            "parameters": [],
+            "type": "bool"
+        },
+        {
+            "body": {
+                "left": "task",
+                "op": "=",
+                "right": 4
+            },
+            "name": "high_value_task",
+            "parameters": [],
+            "type": "bool"
+        }
+    ],
+    "jani-version": 1,
+    "name": "mars-rover",
+    "properties": [
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "op": "Multi",
+                    "properties": [
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "exp": "time",
+                                "op": "Emin"
+                            },
+                            "opt": "min"
+                        },
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "exp": "energy",
+                                "op": "Emin"
+                            },
+                            "opt": "min"
+                        }
+                    ],
+                    "type": "tradeoff"
+                }
+            },
+            "name": "lazy"
+        },
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "exp": {
+                        "left": true,
+                        "op": "U",
+                        "reward-bounds": [
+                            {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "bounds": {
+                                    "lower": {
+                                        "left": "B",
+                                        "op": "*",
+                                        "right": 5
+                                    },
+                                    "lower-exclusive": false
+                                },
+                                "exp": "value"
+                            },
+                            {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "bounds": {
+                                    "upper": {
+                                        "left": "B",
+                                        "op": "*",
+                                        "right": 9
+                                    },
+                                    "upper-exclusive": false
+                                },
+                                "exp": "time"
+                            },
+                            {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "bounds": {
+                                    "upper": {
+                                        "left": "B",
+                                        "op": "*",
+                                        "right": 5
+                                    },
+                                    "upper-exclusive": false
+                                },
+                                "exp": "energy"
+                            }
+                        ],
+                        "right": true
+                    },
+                    "op": "Pmax"
+                }
+            },
+            "name": "max_value_bounded"
+        },
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "op": "Multi",
+                    "properties": [
+                        {
+                            "exp": {
+                                "exp": {
+                                    "left": true,
+                                    "op": "U",
+                                    "reward-bounds": [
+                                        {
+                                            "accumulate": [
+                                                "steps"
+                                            ],
+                                            "bounds": {
+                                                "lower": {
+                                                    "left": "B",
+                                                    "op": "*",
+                                                    "right": 5
+                                                },
+                                                "lower-exclusive": false
+                                            },
+                                            "exp": "value"
+                                        }
+                                    ],
+                                    "right": true
+                                },
+                                "op": "Pmax"
+                            },
+                            "opt": "max"
+                        },
+                        {
+                            "exp": {
+                                "exp": {
+                                    "left": true,
+                                    "op": "U",
+                                    "reward-bounds": [
+                                        {
+                                            "accumulate": [
+                                                "steps"
+                                            ],
+                                            "bounds": {
+                                                "upper": {
+                                                    "left": "B",
+                                                    "op": "*",
+                                                    "right": 9
+                                                },
+                                                "upper-exclusive": false
+                                            },
+                                            "exp": "time"
+                                        },
+                                        {
+                                            "accumulate": [
+                                                "steps"
+                                            ],
+                                            "bounds": {
+                                                "upper": {
+                                                    "left": "B",
+                                                    "op": "*",
+                                                    "right": 5
+                                                },
+                                                "upper-exclusive": false
+                                            },
+                                            "exp": "energy"
+                                        }
+                                    ],
+                                    "right": "done"
+                                },
+                                "op": "Pmax"
+                            },
+                            "opt": "max"
+                        }
+                    ],
+                    "type": "tradeoff"
+                }
+            },
+            "name": "bounded_tradeoff"
+        },
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "exp": {
+                        "left": true,
+                        "op": "U",
+                        "right": {
+                            "left": {
+                                "left": "valueCollected",
+                                "op": "∧",
+                                "right": {
+                                    "exp": "exceedTime",
+                                    "op": "¬"
+                                }
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "exceedEnergy",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "op": "Pmax"
+                }
+            },
+            "name": "safe_collection"
+        },
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "op": "Multi",
+                    "properties": [
+                        {
+                            "exp": {
+                                "exp": {
+                                    "left": true,
+                                    "op": "U",
+                                    "right": "valueCollected"
+                                },
+                                "op": "Pmax"
+                            },
+                            "opt": "max"
+                        },
+                        {
+                            "exp": {
+                                "exp": {
+                                    "left": true,
+                                    "op": "U",
+                                    "right": {
+                                        "left": {
+                                            "left": {
+                                                "exp": "exceedTime",
+                                                "op": "¬"
+                                            },
+                                            "op": "∧",
+                                            "right": {
+                                                "exp": "exceedEnergy",
+                                                "op": "¬"
+                                            }
+                                        },
+                                        "op": "∧",
+                                        "right": "done"
+                                    }
+                                },
+                                "op": "Pmax"
+                            },
+                            "opt": "max"
+                        }
+                    ],
+                    "type": "tradeoff"
+                }
+            },
+            "name": "safe_collection_tradeoff"
+        }
+    ],
+    "restrict-initial": {
+        "exp": true
+    },
+    "system": {
+        "elements": [
+            {
+                "automaton": "rover"
+            },
+            {
+                "automaton": "battery"
+            },
+            {
+                "automaton": "value_counting_module"
+            },
+            {
+                "automaton": "time_counting_module"
+            },
+            {
+                "automaton": "energy_counting_module"
+            },
+            {
+                "automaton": "unfold"
+            }
+        ],
+        "syncs": [
+            {
+                "result": "rover_done",
+                "synchronise": [
+                    "rover_done",
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "task1_start",
+                "synchronise": [
+                    "task1_start",
+                    "task1_start",
+                    null,
+                    null,
+                    null,
+                    "task1_start"
+                ]
+            },
+            {
+                "result": "task2_start",
+                "synchronise": [
+                    "task2_start",
+                    "task2_start",
+                    null,
+                    null,
+                    null,
+                    "task2_start"
+                ]
+            },
+            {
+                "result": "task3_start",
+                "synchronise": [
+                    "task3_start",
+                    "task3_start",
+                    null,
+                    null,
+                    null,
+                    "task3_start"
+                ]
+            },
+            {
+                "result": "task4_start",
+                "synchronise": [
+                    "task4_start",
+                    "task4_start",
+                    null,
+                    null,
+                    null,
+                    "task4_start"
+                ]
+            },
+            {
+                "result": "task_done",
+                "synchronise": [
+                    "task_done",
+                    "task_done",
+                    "task_done",
+                    "task_done",
+                    "task_done",
+                    null
+                ]
+            }
+        ]
+    },
+    "type": "mdp",
+    "variables": [
+        {
+            "initial-value": false,
+            "name": "valueCollected",
+            "transient": true,
+            "type": "bool"
+        },
+        {
+            "initial-value": false,
+            "name": "exceedTime",
+            "transient": true,
+            "type": "bool"
+        },
+        {
+            "initial-value": false,
+            "name": "exceedEnergy",
+            "transient": true,
+            "type": "bool"
+        },
+        {
+            "initial-value": 0.0,
+            "name": "value",
+            "transient": true,
+            "type": "real"
+        },
+        {
+            "initial-value": 0.0,
+            "name": "time",
+            "transient": true,
+            "type": "real"
+        },
+        {
+            "initial-value": 0.0,
+            "name": "energy",
+            "transient": true,
+            "type": "real"
+        },
+        {
+            "initial-value": 0,
+            "name": "task",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": 4
+            }
+        },
+        {
+            "initial-value": false,
+            "name": "success",
+            "type": "bool"
+        },
+        {
+            "initial-value": false,
+            "name": "done",
+            "type": "bool"
+        },
+        {
+            "initial-value": false,
+            "name": "increased_energy",
+            "type": "bool"
+        },
+        {
+            "initial-value": {
+                "else": 0,
+                "if": {
+                    "left": "Unf",
+                    "op": "≥",
+                    "right": 1
+                },
+                "op": "ite",
+                "then": {
+                    "left": "B",
+                    "op": "*",
+                    "right": 5
+                }
+            },
+            "name": "counter_value",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": {
+                    "left": {
+                        "else": 0,
+                        "if": {
+                            "left": "Unf",
+                            "op": "≥",
+                            "right": 1
+                        },
+                        "op": "ite",
+                        "then": {
+                            "left": "B",
+                            "op": "*",
+                            "right": 5
+                        }
+                    },
+                    "op": "+",
+                    "right": 1
+                }
+            }
+        },
+        {
+            "initial-value": {
+                "else": 0,
+                "if": {
+                    "left": "Unf",
+                    "op": "≥",
+                    "right": 2
+                },
+                "op": "ite",
+                "then": {
+                    "left": {
+                        "left": "B",
+                        "op": "*",
+                        "right": 9
+                    },
+                    "op": "+",
+                    "right": 1
+                }
+            },
+            "name": "counter_time",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": {
+                    "left": {
+                        "else": 0,
+                        "if": {
+                            "left": "Unf",
+                            "op": "≥",
+                            "right": 2
+                        },
+                        "op": "ite",
+                        "then": {
+                            "left": {
+                                "left": "B",
+                                "op": "*",
+                                "right": 9
+                            },
+                            "op": "+",
+                            "right": 1
+                        }
+                    },
+                    "op": "+",
+                    "right": 1
+                }
+            }
+        },
+        {
+            "initial-value": {
+                "else": 0,
+                "if": {
+                    "left": "Unf",
+                    "op": "≥",
+                    "right": 2
+                },
+                "op": "ite",
+                "then": {
+                    "left": {
+                        "left": "B",
+                        "op": "*",
+                        "right": 5
+                    },
+                    "op": "+",
+                    "right": 1
+                }
+            },
+            "name": "counter_energy",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": {
+                    "left": {
+                        "else": 0,
+                        "if": {
+                            "left": "Unf",
+                            "op": "≥",
+                            "right": 2
+                        },
+                        "op": "ite",
+                        "then": {
+                            "left": {
+                                "left": "B",
+                                "op": "*",
+                                "right": 5
+                            },
+                            "op": "+",
+                            "right": 1
+                        }
+                    },
+                    "op": "+",
+                    "right": 1
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,156 @@
+{
+	"name": "Human-in-the-Loop UAV Mission Planning",
+	"short": "human-uav",
+	"type": "mdp",
+	"original": "PRISM",
+	"version": 1,
+	"date": "2025-11-13",
+	"version-history": [
+		{
+			"date": "2025-11-13",
+			"notes": "Initial version.",
+			"version": 1
+		}
+	],
+	"author": [
+		"Lu Feng",
+		"Laura Humphrey",
+		"Ufuk Topcu"
+	],
+	"submitter": "Mark van Wijk <mark.vanwijk@utwente.nl>",
+	"source": "https://github.com/tquatmann/qcomp23-multi/tree/main/models/uav",
+	"part-of": {
+		"name": "QComp 2023 multi-objective",
+		"url": "https://github.com/tquatmann/qcomp23-multi"
+	},
+	"description": "This model was part of the multi-objective benchmarking suite for QComp 2023 [0]. We consider an unmanned aerial vehicle (UAV) that interacts with a human. The UAV performs road network surveillance. See [1] for more details",
+	"references": [
+		"https://doi.org/10.1145/2735960.2735973"
+	],
+	"notes": "QComp 2023 multi-objective benchmark",
+	"parameters": [
+		{
+			"name": "Unf",
+			"kind": "open",
+			"description": "0: Don't unfold any rewards, 1: Unfold the value rewards, 2: Unfold all rewards",
+			"type": "positive integer"
+		},
+		{
+			"name": "B",
+			"kind": "open",
+			"description": "Magnitude of reward bounds",
+			"type": "positive integer"
+		},
+		{
+			"name": "COUNTER",
+			"kind": "open",
+			"description": "Fatigue threshold",
+			"type": "positive integer"
+		}
+	],
+	"properties": [
+		{
+			"name": "performant_bounded",
+			"description": "The maximum probability of success while staying in time bounds.",
+			"type": "prob-reach-reward-bounded"
+		},
+		{
+			"name": "performant",
+			"description": "The maximum probability of success without exceeding time.",
+			"type": "prob-reach"
+		},
+		{
+			"name": "performant_safe_bounded",
+			"description": "The tradeoff between the maximum probability of success and minimising dangerous situations, while staying in time bounds.",
+			"type": "multi-tradeoff"
+		},
+		{
+			"name": "performant_safe",
+			"description": "The tradeoff between the maximum probability of success and minimising dangerous situations, without exceeding time.",
+			"type": "multi-tradeoff"
+		}
+	],
+	"files": [
+		{
+			"file": "human-uav.jani",
+			"original-file": [
+				"human-uav.prism",
+				"human-uav.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism human-uav.prism --prop human-uav.props --tojani human-uav.jani"
+			},
+			"file-parameter-values": [],
+			"open-parameter-values": [
+				{
+					"values": [
+						{
+							"name": "Unf",
+							"value": 1
+						},
+						{
+							"name": "B",
+							"value": 500
+						},
+						{
+							"name": "COUNTER",
+							"value": 0
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "Unf",
+							"value": 1
+						},
+						{
+							"name": "B",
+							"value": 750
+						},
+						{
+							"name": "COUNTER",
+							"value": 0
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "Unf",
+							"value": 1
+						},
+						{
+							"name": "B",
+							"value": 1000
+						},
+						{
+							"name": "COUNTER",
+							"value": 0
+						}
+					]
+				},
+				{
+					"values": [
+						{
+							"name": "Unf",
+							"value": 1
+						},
+						{
+							"name": "B",
+							"value": 1500
+						},
+						{
+							"name": "COUNTER",
+							"value": 0
+						}
+					]
+				}
+			]
+		}
+	],
+	"results": []
+}

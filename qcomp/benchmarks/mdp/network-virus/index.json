@@ -1,0 +1,125 @@
+{
+	"name": "Network Virus Infection",
+	"short": "network-virus",
+	"type": "mdp",
+	"original": "PRISM",
+	"version": 1,
+	"date": "2025-11-13",
+	"version-history": [
+		{
+			"date": "2025-11-13",
+			"notes": "Initial version.",
+			"version": 1
+		}
+	],
+	"author": [
+		"Marta Kwiatkowska",
+		"Gethin Norman",
+		"David Parker",
+		"Maria Grazia Vigliotti"
+	],
+	"submitter": "Mark van Wijk <mark.vanwijk@utwente.nl>",
+	"source": "https://github.com/tquatmann/qcomp23-multi/tree/main/models/sen",
+	"part-of": {
+		"name": "QComp 2023 multi-objective",
+		"url": "https://github.com/tquatmann/qcomp23-multi"
+	},
+	"description": "This model was part of the multi-objective benchmarking suite for QComp 2023 [0]. We consider a network and model how a virus can spread through it. See [1] for more details",
+	"references": [
+		"http://prismmodelchecker.org/casestudies/virus.php"
+	],
+	"notes": "QComp 2023 multi-objective benchmark",
+	"parameters": [
+		{
+			"name": "N",
+			"kind": "file",
+			"description": "The width and height of the network",
+			"type": "positive integer"
+		}
+	],
+	"properties": [
+		{
+			"name": "qual1",
+			"description": "Whether it is possible to obtain a given presence of the virus given th minimum frequency of virus cleans.",
+			"type": "multi-tradeoff"
+		},
+		{
+			"name": "qual2",
+			"description": "Whether it is possible to obtain a given presence of the virus given th minimum frequency of virus cleans.",
+			"type": "multi-tradeoff"
+		},
+		{
+			"name": "quant",
+			"description": "The maximum presence of the virus given that the minimum frequency of virus cleans.",
+			"type": "multi-tradeoff"
+		},
+		{
+			"name": "pareto",
+			"description": "The tradeoff between maximising the spread of the virus through the network and maximising the cleaning of the virus.",
+			"type": "multi-tradeoff"
+		}
+	],
+	"files": [
+		{
+			"file": "network-virus.2.jani",
+			"original-file": [
+				"network-virus.2.prism",
+				"network-virus.2.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism network-virus.2.prism --prop network-virus.2.props --tojani network-virus.2.jani"
+			},
+			"open-parameter-values": [],
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 2
+				}
+			]
+		},
+		{
+			"file": "network-virus.3.jani",
+			"original-file": [
+				"network-virus.3.prism",
+				"network-virus.3.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism network-virus.3.prism --prop network-virus.3.props --tojani network-virus.3.jani"
+			},
+			"open-parameter-values": [],
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 3
+				}
+			]
+		},
+		{
+			"file": "network-virus.4.jani",
+			"original-file": [
+				"network-virus.4.prism",
+				"network-virus.4.props"
+			],
+			"conversion": {
+				"tool": "Storm-conv",
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism network-virus.4.prism --prop network-virus.4.props --tojani network-virus.4.jani"
+			},
+			"open-parameter-values": [],
+			"file-parameter-values": [
+				{
+					"name": "N",
+					"value": 4
+				}
+			]
+		}
+	],
+	"results": []
+}

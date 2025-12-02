@@ -1,0 +1,5 @@
+"social": multi(R{"time"}min=? [C], R{"interaction"}max=? [C]);
+"performant": Pmax=? [F{"time"}<=B taskdone];
+"efficient_bounded": multi(Pmax=? [F{"time"}<=B taskdone], R{"interaction"}max=? [C{"time"}<=B]);
+"effective": Pmax=? [F !"timeExceeded" & taskdone];
+"efficient": multi(Pmax=? [F !"timeExceeded" & taskdone], R{"interaction"}max=? [F "timeExceeded"]);

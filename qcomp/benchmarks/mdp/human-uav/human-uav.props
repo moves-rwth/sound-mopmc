@@ -1,0 +1,6 @@
+"performant_bounded": Pmax=? [ F{"time"}<=B "mission"];
+"performant": Pmax=? [ F !"timeExceeded" & "mission" ];
+
+"performant_safe_bounded": multi(Pmax=? [ F{"time"}<=B "mission" ], R{"ROZ"}min=? [ C{"time"}<=B]);
+"performant_safe": multi(Pmax=? [F !"timeExceeded" & "mission" ], R{"ROZ"}min=? [ C ]);
+
